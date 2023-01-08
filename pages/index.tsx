@@ -4,6 +4,10 @@ import Image from "next/image";
 import client from "../lib/apollo";
 import { gql } from "@apollo/client";
 import Link from "next/link";
+import styles from "../components/bgImages.module.css";
+import useSound from "use-sound";
+// import Hover from "../../resources/hover.mp3";
+import { useState } from "react";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -34,26 +38,23 @@ export async function getStaticProps() {
 const Home: NextPage = ({ posts }: any) => {
   if (!posts) return <div>No Data!</div>;
 
+  // const soundUrl = "../../resources/hover.mp3";
+  // const [play, { stop }] = useSound(soundUrl, { volume: 0.5 });
+  // const [isHovering, setIsHovering] = useState(false);
+
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center py-2">
-      <Head>
-        <title>Next Hygraph</title>
-        <link rel="icon" href="/favicon.ico" />
-      </Head>
-      <div className="">
-        <h1 className="text-4xl my-8 font-black">Jay Khan</h1>
-      </div>
-      {/* POSTS */}
-      <div className="grid space-y-4">
-        {posts.map((post: any) => (
-          <Link
-            key={post.id}
-            href={`/projects/${post.slug}`}
-            className="border p-4 hover:bg-gray-900 duration-200"
-          >
-            <h1>{post.title}</h1>
-          </Link>
-        ))}
+    <div className={styles.bgImageHome}>
+      <div className="flex min-h-screen flex-col items-center justify-center py-2 bg-zinc-900/90">
+        <Head>
+          <title>Jay Khan</title>
+          <link rel="icon" href="/favicon.ico" />
+        </Head>
+        <div className="">
+          <h1 className="text-9xl my-8 font-black logo bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-600">
+            Jay Khan
+          </h1>
+          <p>Frontend Developer</p>
+        </div>
       </div>
     </div>
   );

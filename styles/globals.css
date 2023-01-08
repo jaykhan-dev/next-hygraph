@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Martian+Mono&family=Prompt:wght@700&family=Questrial&display=swap");
+
+/*
+font-family: 'Covered By Your Grace', cursive;
+font-family: 'Martian Mono', monospace;
+font-family: 'Prompt', sans-serif;
+font-family: 'Questrial', sans-serif;
+*/
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+h1 {
+  font-family: "Prompt", sans-serif;
+}
+
+a,
+button {
+  font-family: "Martian Mono", monospace;
+}
+
+article,
+p {
+  font-family: "Questrial", sans-serif;
+}
+
+.logo {
+  font-family: "Covered By Your Grace", cursive;
+}

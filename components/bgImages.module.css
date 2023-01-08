@@ -1,0 +1,6 @@
+.bgImageHome {
+  background-image: url("/images/abstract-bg-1-80.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}

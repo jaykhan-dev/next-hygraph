@@ -2,6 +2,7 @@ import { gql } from "@apollo/client";
 import client from "../../lib/apollo";
 import Head from "next/head";
 import Image from "next/image";
+import { RichText } from "@graphcms/rich-text-react-renderer";
 
 export async function getStaticProps({ params }: any) {
   const GET_PROJECTS = gql`
@@ -20,9 +21,6 @@ export async function getStaticProps({ params }: any) {
         }
         content {
           html
-          markdown
-          raw
-          text
         }
         id
         slug
@@ -73,11 +71,17 @@ export default function Project({ project }: any) {
           <h1 className="text-6xl font-black my-8">{project.title}</h1>
           <p>by: {project.author.name}</p>
           <p className="text-xl my-8">{project.excerpt}</p>
+          {/* <RichText
+            content={project.content.html}
+            renderers={{
+              h1: ({ children }) => <h1 className="text-white">{children}</h1>,
+              bold: ({ children }) => <strong>{children}</strong>,
+            }}
+          /> */}
           <article
-            className="leading-10"
             dangerouslySetInnerHTML={{ __html: project.content.html }}
           ></article>
-          <div>{project.tags}</div>
+          <button className="btn btn-primary">{project.tags}</button>
         </div>
       </div>
     </>
