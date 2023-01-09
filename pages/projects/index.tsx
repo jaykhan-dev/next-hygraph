@@ -4,19 +4,20 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { NextPage } from "next";
+import Horse from "../../public/images/horse.svg";
+import styles from "../../components/bgImages.module.css";
 
 export async function getServerSideProps() {
   const { data } = await client.query({
     query: gql`
-      query Posts {
-        posts {
+      query Projects {
+        projects {
           title
           id
           slug
-          date
           excerpt
-          tags
-          coverImage {
+          category
+          projectImage {
             url
           }
         }
@@ -26,13 +27,13 @@ export async function getServerSideProps() {
 
   return {
     props: {
-      posts: data.posts,
+      projects: data.projects,
     },
   };
 }
 
-const Projects: NextPage = ({ posts }: any) => {
-  if (!posts) return <div>no projects!</div>;
+const Projects: NextPage = ({ projects }: any) => {
+  if (!projects) return <div>no projects!</div>;
 
   return (
     <>
@@ -41,24 +42,39 @@ const Projects: NextPage = ({ posts }: any) => {
         <meta title="description" content="Jay Khan work projects" />
       </Head>
 
-      <div className="">
-        <div className="bg-black/90">
-          <div className="lg:w-2/3 mx-auto my-20 py-20 grid lg:grid-cols-3 gap-4">
-            {posts.map((post: any) => (
+      <div className={styles.projectBg}>
+        <div className="bg-gradient-to-b from-zinc-900/90 to-zinc-900 backdrop-blur-md p-4">
+          <div className="py-20 w-full text-center flex justify-center items-center space-x-1">
+            <div className="">
+              {/* <Image
+                src={Horse}
+                width={100}
+                height={200}
+                alt="campfire graphic"
+              /> */}
+            </div>
+            <h1 className="lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
+              Projects
+            </h1>
+          </div>
+
+          <div className="lg:w-2/3 mx-auto py-20 grid lg:grid-cols-3 gap-4">
+            {projects.map((project: any) => (
               <Link
-                key={post.id}
-                href={`/projects/${post.slug}`}
-                className="border border-white/10 rounded hover:border-white/30 my-4 hover:shadow-xl p-1 hover:bg-gray-900 duration-200"
+                key={project.id}
+                href={`/projects/${project.slug}`}
+                className="border border-white/10 rounded hover:border-white/30 my-4 hover:shadow-xl p-1 hover:scale-95 duration-200"
               >
                 <Image
-                  src={post.coverImage.url}
-                  height={200}
-                  width={200}
+                  src={project.projectImage?.url}
+                  height={800}
+                  width={1000}
                   alt="project image"
                 />
-                <div className="py-4">
-                  <h1 className="text-3xl font-bold my-2">{post.title}</h1>
-                  <p>{post.excerpt}</p>
+                <div className="py-4 p-4">
+                  <h1 className="text-3xl font-bold my-2">{project.title}</h1>
+                  <p className="my-4">{project.excerpt}</p>
+                  <p className="badge badge-accent">{project.category}</p>
                 </div>
               </Link>
             ))}

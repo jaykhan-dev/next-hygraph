@@ -6,24 +6,19 @@ import { RichText } from "@graphcms/rich-text-react-renderer";
 
 export async function getStaticProps({ params }: any) {
   const GET_PROJECTS = gql`
-    query SinglePost($slug: String!) {
-      post(where: { slug: $slug }) {
+    query SingleProject($slug: String!) {
+      project(where: { slug: $slug }) {
         title
         excerpt
-        tags
-        date
-        coverImage {
-          url
-        }
-        author {
-          name
-          id
-        }
+        id
+        slug
         content {
           html
         }
-        id
-        slug
+        projectImage {
+          url
+        }
+        category
       }
     }
   `;
@@ -35,7 +30,7 @@ export async function getStaticProps({ params }: any) {
     },
   });
 
-  const project = response.data?.post;
+  const project = response.data?.project;
   return {
     props: {
       project,
@@ -60,7 +55,7 @@ export default function Project({ project }: any) {
       <div className="grid place-items-center relative">
         <div className="h-96 overflow-hidden">
           <Image
-            src={project.coverImage.url}
+            src={project.projectImage.url}
             alt="hygraph image"
             width={1920}
             height={200}
@@ -69,7 +64,6 @@ export default function Project({ project }: any) {
         </div>
         <div className="z-40 lg:w-1/2 mx-auto p-4">
           <h1 className="text-6xl font-black my-8">{project.title}</h1>
-          <p>by: {project.author.name}</p>
           <p className="text-xl my-8">{project.excerpt}</p>
           {/* <RichText
             content={project.content.html}
@@ -79,9 +73,14 @@ export default function Project({ project }: any) {
             }}
           /> */}
           <article
-            dangerouslySetInnerHTML={{ __html: project.content.html }}
+            dangerouslySetInnerHTML={{ __html: project?.content?.html }}
           ></article>
-          <button className="btn btn-primary">{project.tags}</button>
+          <button className="btn btn-primary">{project.category}</button>
+          {/* <div>
+            {project.tags.map((tag: any) => (
+              <li>{tag.tag}</li>
+            ))}
+          </div> */}
         </div>
       </div>
     </>

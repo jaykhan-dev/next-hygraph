@@ -4,3 +4,10 @@
   background-size: cover;
   background-position: fixed;
 }
+
+.projectBg {
+  background-image: url("/images/horse.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: fixed;
+}
