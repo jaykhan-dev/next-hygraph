@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 import client from "../../lib/apollo";
 import Head from "next/head";
 import Image from "next/image";
-import { RichText } from "@graphcms/rich-text-react-renderer";
+// import { RichText } from "@graphcms/rich-text-react-renderer";
 
 export async function getStaticProps({ params }: any) {
   const GET_PROJECTS = gql`
