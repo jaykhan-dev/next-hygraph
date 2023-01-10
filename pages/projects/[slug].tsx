@@ -2,6 +2,7 @@ import { gql } from "@apollo/client";
 import client from "../../lib/apollo";
 import Head from "next/head";
 import Image from "next/image";
+import { NextPage } from "next";
 // import { RichText } from "@graphcms/rich-text-react-renderer";
 
 export async function getStaticProps({ params }: any) {
@@ -46,7 +47,7 @@ export async function getStaticPaths() {
   };
 }
 
-export default function Project({ project }: any) {
+const Project: NextPage = ({ project }: any) => {
   return (
     <>
       <Head>
@@ -85,4 +86,6 @@ export default function Project({ project }: any) {
       </div>
     </>
   );
-}
+};
+
+export default Project;
