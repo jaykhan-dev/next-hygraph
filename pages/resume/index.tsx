@@ -45,13 +45,13 @@ const Resume: NextPage = ({ jobs }: any) => {
       </Head>
       <div className="block bg-zinc-900">
         <div className="py-20 bg-gradient-to-b from-black to-zinc-900 w-full text-center flex justify-center items-center border-b border-white/10">
-          <Image
+          {/* <Image
             src={Wanderer}
             width={200}
             height={200}
             alt="wanderer graphic"
-          />
-          <h1 className="lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
+          /> */}
+          <h1 className="my-4 lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
             Resume
           </h1>
         </div>

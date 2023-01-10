@@ -53,18 +53,18 @@ const Project: NextPage = ({ project }: any) => {
       <Head>
         <title>{project.title}</title>
       </Head>
-      <div className="grid place-items-center relative">
-        <div className="h-96 overflow-hidden">
+      <div className="grid place-items-center relative bg-gradient-to-b from-zinc-900/90 to-zinc-900">
+        <div className="overflow-hidden lg:w-1/2 mx-auto my-12 py-12">
           <Image
             src={project.projectImage.url}
             alt="hygraph image"
             width={1920}
             height={200}
-            className="bg-fixed"
+            className="border border-white/20 rounded shadow-xl"
           />
         </div>
         <div className="z-40 lg:w-1/2 mx-auto p-4">
-          <h1 className="text-6xl font-black my-8">{project.title}</h1>
+          <h1 className="text-6xl font-black my-4">{project.title}</h1>
           <p className="text-xl my-8">{project.excerpt}</p>
           {/* <RichText
             content={project.content.html}
@@ -73,10 +73,11 @@ const Project: NextPage = ({ project }: any) => {
               bold: ({ children }) => <strong>{children}</strong>,
             }}
           /> */}
+          <button className="badge badge-accent">{project.category}</button>
           <article
+            className="my-4"
             dangerouslySetInnerHTML={{ __html: project?.content?.html }}
           ></article>
-          <button className="btn btn-primary">{project.category}</button>
           {/* <div>
             {project.tags.map((tag: any) => (
               <li>{tag.tag}</li>

@@ -43,7 +43,7 @@ const Projects: NextPage = ({ projects }: any) => {
       </Head>
 
       <div className={styles.projectBg}>
-        <div className="bg-gradient-to-b from-zinc-900/90 to-zinc-900 backdrop-blur-md p-4">
+        <div className="bg-gradient-to-b from-black/90 to-zinc-900 backdrop-blur-md p-4">
           <div className="py-20 w-full text-center flex justify-center items-center space-x-1">
             <div className="">
               {/* <Image

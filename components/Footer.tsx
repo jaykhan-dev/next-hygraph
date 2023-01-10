@@ -15,14 +15,14 @@ export default function Footer() {
         ></iframe>
       </div> */}
       <div className="grid place-items-center bg-gradient-to-b from-zinc-900 to-black text-white">
-        <div className="lg:w-2/3 mx-auto grid lg:grid-cols-3 py-20">
+        <div className="lg:w-2/3 mx-auto grid lg:grid-cols-3 py-20 opacity-10 hover:opacity-100 duration-500">
           <div>
             <Image
               src={FooterGraphic}
               height={800}
               width={300}
               alt="footer graphic"
-              className="opacity-10 hover:opacity-50 duration-500"
+              className=""
             />
           </div>
           <div className="lg:col-span-2 p-4">
@@ -33,25 +33,54 @@ export default function Footer() {
               </h2>
             </div>
             <div>
-              <a href="#">
+              <a href="mailto:jaykhan.sound@gmail.com">
                 <p className="text-2xl my-8">jaykhan.sound@gmail.com</p>
               </a>
             </div>
             <div className="text-4xl space-x-4">
-              <i className="fa-brands fa-twitter"></i>
-              <i className="fa-brands fa-github"></i>
-              <i className="fa-brands fa-linkedin"></i>
+              <a
+                href="https://www.twitter.com/j__khan"
+                rel="noreferer noopener"
+                target="_blank"
+              >
+                <i className="fa-brands fa-twitter hover:scale-110 duration-300"></i>
+              </a>
+              <a
+                href="https://github.com/jaykhan-dev"
+                rel="noreferer noopener"
+                target="_blank"
+              >
+                <i className="fa-brands fa-github hover:scale-110 duration-300"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/jkhanprofile"
+                rel="noreferer noopener"
+                target="_blank"
+              >
+                <i className="fa-brands fa-linkedin hover:scale-110 duration-300"></i>
+              </a>
+            </div>
+            <div className="h-96 my-8 border border-white/10 rounded shadow-xl">
+              <iframe
+                src="https://my.spline.design/interactivespherescopy-397558837af7b3db9602d1bcc603c9f9/"
+                frameBorder="0"
+                width="100%"
+                height="100%"
+              ></iframe>
             </div>
           </div>
         </div>
-        <div className="w-full bg-black py-4 mt-8">
-          <Marquee speed={100} gradient={false}>
+        <div className="w-full bg-black py-4 mt-8 border-t border-white/10">
+          <Marquee speed={50} gradient={false}>
             <p className="uppercase text-xl tracking-wide mx-4">
-              There are only 5 notes but more melodies can be made with these
-              than can ever be heard
+              There are not more than five musical notes, yet the combinations
+              of these five give rise to more melodies than can ever be heard
             </p>
             <p className="uppercase text-xl tracking-wide mx-4">
-              The supreme art of war is to subdue the enemy without fighting.
+              I don’t believe a second, compatible implementation of Bitcoin
+              will ever be a good idea. So much of the design depends on all
+              nodes getting exactly identical results in lockstep that a second
+              implementation would be a menace to the network.
             </p>
           </Marquee>
         </div>
