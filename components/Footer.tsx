@@ -16,7 +16,7 @@ export default function Footer() {
       </div> */}
       <div className="grid place-items-center bg-gradient-to-b from-zinc-900 to-black text-white">
         <div className="lg:w-2/3 mx-auto grid lg:grid-cols-3 py-20 opacity-10 hover:opacity-100 duration-500">
-          <div>
+          <div className="col-span-1">
             <Image
               src={FooterGraphic}
               height={800}
@@ -28,13 +28,15 @@ export default function Footer() {
           <div className="lg:col-span-2 p-4">
             <div className="flex items-center space-x-2">
               {/* <AtSymbolIcon className="h-12 w-12" /> */}
-              <h2 className="text-6xl font-black border-b border-white/10 py-4 w-full">
+              <h2 className="lg:text-6xl text-4xl font-black border-b border-white/10 py-4 w-full">
                 Get in touch
               </h2>
             </div>
             <div>
               <a href="mailto:jaykhan.sound@gmail.com">
-                <p className="text-2xl my-8">jaykhan.sound@gmail.com</p>
+                <p className="lg:text-2xl text-xl my-8">
+                  jaykhan.sound@gmail.com
+                </p>
               </a>
             </div>
             <div className="text-4xl space-x-4">
@@ -70,18 +72,18 @@ export default function Footer() {
             </div>
           </div>
         </div>
-        <div className="w-full bg-black py-4 mt-8 border-t border-white/10">
+        <div className="bg-black py-4 mt-8 border-t border-white/10">
           <Marquee speed={50} gradient={false}>
             <p className="uppercase text-xl tracking-wide mx-4">
               There are not more than five musical notes, yet the combinations
               of these five give rise to more melodies than can ever be heard
             </p>
-            <p className="uppercase text-xl tracking-wide mx-4">
+            {/* <p className="uppercase text-xl tracking-wide mx-4">
               I don’t believe a second, compatible implementation of Bitcoin
               will ever be a good idea. So much of the design depends on all
               nodes getting exactly identical results in lockstep that a second
               implementation would be a menace to the network.
-            </p>
+            </p> */}
           </Marquee>
         </div>
       </div>
