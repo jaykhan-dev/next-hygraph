@@ -119,7 +119,7 @@ const Project: NextPage = ({ project, children }: any) => {
 
           {/* RICH TEXT HYGRAPH */}
           <RichText
-            content={project?.content.raw}
+            content={project.content?.raw}
             renderers={{
               h2: ({ children }: any) => (
                 <h2 className="text-4xl font-bold mt-4 py-4">{children}</h2>
