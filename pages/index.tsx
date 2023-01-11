@@ -8,6 +8,7 @@ import styles from "../components/bgImages.module.css";
 import { useState } from "react";
 import JK from "../public/images/jaykhan.jpg";
 import Script from "next/script";
+import { motion } from "framer-motion";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -35,6 +36,34 @@ export async function getStaticProps() {
   };
 }
 
+const heroVariants = {
+  hidden: {
+    x: 10,
+    opacity: 0,
+  },
+  visible: {
+    x: 0,
+    opacity: 1,
+    transition: {
+      delay: 0.3,
+    },
+  },
+};
+
+const gridVariants = {
+  hidden: {
+    opacity: 0,
+    y: 10,
+  },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: 0.5,
+    },
+  },
+};
+
 const Home: NextPage = ({ posts }: any) => {
   if (!posts) return <div>No Data!</div>;
 
@@ -57,7 +86,12 @@ const Home: NextPage = ({ posts }: any) => {
       <div className={styles.bgImageHome}>
         <div className="py-20 bg-gradient-to-b from-zinc-900/80 to-zinc-900">
           <div className="grid place-items-center">
-            <div className="grid place-items-center p-4">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={heroVariants}
+              className="grid place-items-center p-4"
+            >
               <Image
                 src={JK}
                 alt="logo"
@@ -75,8 +109,13 @@ const Home: NextPage = ({ posts }: any) => {
               <Link href="/projects">
                 <button className="btn btn-primary">See Projects</button>
               </Link>
-            </div>
-            <div className="grid lg:grid-cols-3 gap-4 my-8 lg:w-1/2 mx-auto text-center p-4">
+            </motion.div>
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={gridVariants}
+              className="grid lg:grid-cols-3 gap-4 my-8 lg:w-1/2 mx-auto text-center p-4"
+            >
               <div className="border border-white/10 p-4 rounded grid place-items-center">
                 {/* @ts-ignore */}
                 <lottie-player
@@ -140,7 +179,7 @@ const Home: NextPage = ({ posts }: any) => {
                   <button className="btn btn-outline">See Projects</button>
                 </Link> */}
               </div>
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>

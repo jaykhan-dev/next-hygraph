@@ -4,10 +4,10 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { NextPage } from "next";
-import Horse from "../../public/images/horse.svg";
+// import Horse from "../../public/images/horse.svg";
 import styles from "../../components/bgImages.module.css";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query Projects {

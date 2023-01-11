@@ -3,6 +3,7 @@ import { gql } from "@apollo/client";
 import Head from "next/head";
 import Image from "next/image";
 import { NextPage } from "next";
+import { motion } from "framer-motion";
 
 export async function getServerSideProps() {
   const { data } = await client.query({
@@ -31,6 +32,32 @@ export async function getServerSideProps() {
   };
 }
 
+const headerVariants = {
+  hidden: {
+    opacity: 0,
+    x: 10,
+  },
+  visible: {
+    opacity: 1,
+    x: 0,
+    transition: {
+      delay: 0.3,
+    },
+  },
+};
+
+const textVariants = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      delay: 0.5,
+    },
+  },
+};
+
 const Music: NextPage = ({ tracks }: any) => {
   return (
     <>
@@ -40,7 +67,12 @@ const Music: NextPage = ({ tracks }: any) => {
       <div className="">
         <div className="bg-gradient-to-b from-black/90 to-zinc-900">
           <div className="text-center lg:w-2/3 mx-auto">
-            <div className="py-20 w-full text-center flex justify-center items-center space-x-1">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={headerVariants}
+              className="py-20 w-full text-center flex justify-center items-center space-x-1"
+            >
               <div className="my-16">
                 {/* <Image
                 src={Horse}
@@ -52,10 +84,15 @@ const Music: NextPage = ({ tracks }: any) => {
               <h1 className="lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
                 Music
               </h1>
-            </div>
+            </motion.div>
 
             {/* data */}
-            <div className="p-4">
+            <motion.div
+              initial="hidden"
+              animate="visible"
+              variants={textVariants}
+              className="p-4"
+            >
               {tracks.map((track: any) => (
                 <div
                   key={track.id}
@@ -70,7 +107,7 @@ const Music: NextPage = ({ tracks }: any) => {
                   ))}
                 </div>
               ))}
-            </div>
+            </motion.div>
           </div>
         </div>
       </div>
