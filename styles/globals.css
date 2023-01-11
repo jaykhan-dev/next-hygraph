@@ -31,4 +31,16 @@ p {
 body {
   display: block;
   overflow-x: hidden;
+  cursor: crosshair;
+}
+
+.cursor {
+  background-color: #111;
+  height: 28px;
+  width: 28px;
+  border-radius: 50%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  pointer-events: none;
 }

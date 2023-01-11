@@ -5,7 +5,7 @@ import Image from "next/image";
 import { NextPage } from "next";
 import { motion } from "framer-motion";
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const { data } = await client.query({
     query: gql`
       query allMusic {
