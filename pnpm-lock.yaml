@@ -3,17 +3,18 @@ lockfileVersion: 5.4
 specifiers:
   '@apollo/client': ^3.7.3
   '@graphcms/rich-text-react-renderer': ^0.6.1
+  '@graphcms/rich-text-types': ^0.5.0
   '@heroicons/react': ^2.0.13
   '@react-three/fiber': ^8.10.0
   '@splinetool/react-spline': ^2.2.5
-  '@splinetool/runtime': ^0.9.178
+  '@splinetool/runtime': ^0.9.180
   '@types/node': 18.11.3
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   '@types/three': ^0.148.0
   autoprefixer: ^10.4.13
   daisyui: ^2.46.1
-  framer-motion: ^8.3.3
+  framer-motion: ^8.4.0
   graphql: ^16.6.0
   next: ^13.1.1
   postcss: ^8.4.21
@@ -28,13 +29,14 @@ specifiers:
 dependencies:
   '@apollo/client': 3.7.3_gdcq4dv6opitr3wbfwyjmanyra
   '@graphcms/rich-text-react-renderer': 0.6.1_biqbaboplfbrettd7655fr4n2y
+  '@graphcms/rich-text-types': 0.5.0
   '@heroicons/react': 2.0.13_react@18.2.0
   '@react-three/fiber': 8.10.0_4tzez3c2xpzuefjrvhpyy55bva
-  '@splinetool/react-spline': 2.2.5_dcprzazgmanbh6nxywi6plhyfe
-  '@splinetool/runtime': 0.9.178
+  '@splinetool/react-spline': 2.2.5_kxkc2ff2qjbzxxomxlq5tbhpoy
+  '@splinetool/runtime': 0.9.180
   '@types/three': 0.148.0
   daisyui: 2.46.1_gbtt6ss3tbiz4yjtvdr6fbrj44
-  framer-motion: 8.3.3_biqbaboplfbrettd7655fr4n2y
+  framer-motion: 8.4.0_biqbaboplfbrettd7655fr4n2y
   graphql: 16.6.0
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
@@ -366,21 +368,21 @@ packages:
       zustand: 3.7.2_react@18.2.0
     dev: false
 
-  /@splinetool/react-spline/2.2.5_dcprzazgmanbh6nxywi6plhyfe:
+  /@splinetool/react-spline/2.2.5_kxkc2ff2qjbzxxomxlq5tbhpoy:
     resolution: {integrity: sha512-eAD6+GteOT9S7Z3OdsT/6o6WNYk5NLx48zmHXathdNVdfW/P3npTxEGzEhiM+aMsf2+HbRZx0pX0WHt59HDjlg==}
     peerDependencies:
       '@splinetool/runtime': '*'
       react: '>=17.0.0'
       react-dom: '>=17.0.0'
     dependencies:
-      '@splinetool/runtime': 0.9.178
+      '@splinetool/runtime': 0.9.180
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
       react-merge-refs: 1.1.0
     dev: false
 
-  /@splinetool/runtime/0.9.178:
-    resolution: {integrity: sha512-XKVNl+thRyR2Zx4/CyrZKMdIhv9ZGgTFwMqCkUEITJQQf6mN8wdcOtc3gfgnZM/+GRCihvrfBg1TR6cv1H/8nA==}
+  /@splinetool/runtime/0.9.180:
+    resolution: {integrity: sha512-+aPKo5ENCZPPRdjbT0K+D6MvtdeaRftXZOnUB2O+CDlHos2bduErTiq/m7cHIbkQ3hdtnjBTE0o9tuxYDlmrDw==}
     dependencies:
       on-change: 4.0.2
     dev: false
@@ -660,8 +662,8 @@ packages:
   /fraction.js/4.2.0:
     resolution: {integrity: sha512-MhLuK+2gUcnZe8ZHlaaINnQLl0xRIGRfcGk2yl8xoQAfHrSsL3rYu6FCmBdkdbhc9EPlwyGHewaRsvwRMJtAlA==}
 
-  /framer-motion/8.3.3_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-K7YpdFSfcs8M12m1gd8AankcEeYh8DhQKPBbCecniSWdOwcfrACiwMptCepMCdDehKmzHo1iDxYXy4FEhw9yaw==}
+  /framer-motion/8.4.0_biqbaboplfbrettd7655fr4n2y:
+    resolution: {integrity: sha512-32ECxsAMrhFfpMnA/j3wXku//587kQe29emTGpIQsnh60mFSMTrnpIupAn5Bnk5qq4/OMNgWWCI6mnaFhsIu7w==}
     peerDependencies:
       react: ^18.0.0
       react-dom: ^18.0.0
