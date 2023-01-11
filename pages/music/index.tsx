@@ -17,7 +17,6 @@ export async function getStaticProps() {
             id
           }
           track {
-            3+6
             url
             id
           }
