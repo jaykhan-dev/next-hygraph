@@ -79,7 +79,7 @@ const Home: NextPage = ({ posts }: any) => {
           title="description"
           content="I design and build user interfaces and digital assets"
         />
-        <link rel="icon" href="/jk-favicon-transparent.ico" />
+
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
       </Head>
 
