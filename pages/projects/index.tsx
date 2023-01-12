@@ -6,23 +6,11 @@ import Link from "next/link";
 import { NextPage } from "next";
 // import Horse from "../../public/images/horse.svg";
 import styles from "../../components/bgImages.module.css";
+import GET_PROJECTS from "../../lib/projectWebAll";
 
 export async function getStaticProps() {
   const { data } = await client.query({
-    query: gql`
-      query Projects {
-        projects {
-          title
-          id
-          slug
-          excerpt
-          category
-          projectImage {
-            url
-          }
-        }
-      }
-    `,
+    query: GET_PROJECTS,
   });
 
   return {

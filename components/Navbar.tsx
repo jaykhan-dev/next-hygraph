@@ -41,7 +41,7 @@ export default function Navbar() {
             className="flex items-center space-x-2 hover:scale-105 duration-300"
           >
             <Image src={JKLogo} width={35} height={35} alt="jk logo" />
-            <p className="lg:block hidden">Jay</p>
+            {/* <p className="lg:block hidden">Jay</p> */}
           </Link>
         </div>
         <div className="flex items-center space-x-2">

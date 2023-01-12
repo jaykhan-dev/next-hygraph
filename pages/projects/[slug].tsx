@@ -5,29 +5,11 @@ import Image from "next/image";
 import { NextPage } from "next";
 import { motion } from "framer-motion";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import GET_SINGLE_PROJECT from "../../lib/projectWebSingle";
 
 export async function getStaticProps({ params }: any) {
-  const GET_PROJECTS = gql`
-    query SingleProject($slug: String!) {
-      project(where: { slug: $slug }) {
-        title
-        excerpt
-        id
-        slug
-        content {
-          html
-          raw
-        }
-        projectImage {
-          url
-        }
-        category
-      }
-    }
-  `;
-
   const response = await client.query({
-    query: GET_PROJECTS,
+    query: GET_SINGLE_PROJECT,
     variables: {
       slug: params.slug,
     },
@@ -89,7 +71,7 @@ const Project: NextPage = ({ project, children }: any) => {
           className="overflow-hidden lg:w-1/2 mx-auto my-12 py-12"
         >
           <Image
-            src={project.projectImage.url}
+            src={project.projectImage?.url}
             alt="hygraph image"
             width={1920}
             height={200}
@@ -112,10 +94,6 @@ const Project: NextPage = ({ project, children }: any) => {
             }}
           /> */}
           <button className="badge badge-accent">{project.category}</button>
-          {/* <article
-            className="my-4"
-            dangerouslySetInnerHTML={{ __html: project?.content?.html }}
-          ></article> */}
 
           {/* RICH TEXT HYGRAPH */}
           <RichText
@@ -133,6 +111,16 @@ const Project: NextPage = ({ project, children }: any) => {
                   {children}
                 </blockquote>
               ),
+              li: ({ children }) => <li className="my-2">&#187; {children}</li>,
+              // a: ({ children }) => (
+              //   <a
+              //     className="text-blue-600"
+              //     rel="noreferrer noopener"
+              //     target="_blank"
+              //   >
+              //     {children}
+              //   </a>
+              // ),
             }}
           />
           {/* <div>
