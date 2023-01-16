@@ -1,13 +1,16 @@
 import Link from "next/link";
-// import { HomeIcon } from "@heroicons/react/24/outline";
-import { MusicalNoteIcon } from "@heroicons/react/24/outline";
-import { ClipboardDocumentIcon } from "@heroicons/react/24/outline";
-import { TableCellsIcon } from "@heroicons/react/24/outline";
-// import { ComputerDesktopIcon } from "@heroicons/react/24/outline";
-// import { AtSymbolIcon } from "@heroicons/react/24/outline";
+import {
+  TableCellsIcon,
+  SunIcon,
+  MoonIcon,
+  MusicalNoteIcon,
+  ClipboardDocumentIcon,
+} from "@heroicons/react/24/outline";
 import Image from "next/image";
 import JKLogo from "../public/images/jk-logo-blue.svg";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { useTheme } from "next-themes";
 
 const variants = {
   hidden: {
@@ -27,12 +30,20 @@ const variants = {
 // "lg:overflow-hidden overflow-x-scroll whitespace-nowrap"
 
 export default function Navbar() {
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+  if (!mounted) return null;
+  console.log(theme);
+
   return (
     <motion.nav
       initial="hidden"
       animate="visible"
       variants={variants}
-      className="bg-black/90 backdrop-blur-md text-white flex justify-center py-4 fixed top-0 w-full z-50 border-b border-white/10"
+      className="dark:bg-black backdrop-blur-md text-white flex justify-center py-4 fixed top-0 w-full z-50 border-b border-white/10"
     >
       <div className="lg:w-2/3 mx-auto space-x-4 w-full flex lg:justify-between justify-center items-center whitespace-nowrap uppercase text-sm px-4">
         <div>
@@ -66,6 +77,14 @@ export default function Navbar() {
             <TableCellsIcon className="h-6 w-6 text-blue-500" />
             <p className="lg:block hidden">Resume</p>
           </Link>
+          <div>
+            {/* LIGHT/DARK */}
+            <button
+              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+            >
+              {theme === "dark" ? "light" : "dark"}
+            </button>
+          </div>
         </div>
         {/* <Link href="/tech-blog" className="flex items-center space-x-2">
           <ComputerDesktopIcon className="h-6 w-6 text-blue-500" />

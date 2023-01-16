@@ -15,6 +15,7 @@ const GET_SINGLE_PROJECT = gql`
         url
       }
       category
+      tags
     }
   }
 `;

@@ -64,8 +64,8 @@ const Music: NextPage = ({ tracks }: any) => {
       <Head>
         <title>Jay Khan Music</title>
       </Head>
-      <div className="">
-        <div className="bg-gradient-to-b from-black/90 to-zinc-900">
+      <div id="musicIndex" className="text-white">
+        <div className="bg-gradient-to-b from-black/90 to-zinc-900 lg:h-screen">
           <div className="text-center lg:w-2/3 mx-auto">
             <motion.div
               initial="hidden"

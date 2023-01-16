@@ -70,6 +70,34 @@ export default function Footer() {
                 height="100%"
               ></iframe>
             </div>
+
+            {/* CONTACT FORM */}
+
+            {/* <div>
+              <form
+                action=""
+                className="grid space-y-4 py-4 rounded h-full font-mono"
+              >
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="name"
+                  className="p-4 bg-black/0 border border-white/10 rounded"
+                />
+                <input
+                  type="text"
+                  name=""
+                  id=""
+                  placeholder="email"
+                  className="p-4 bg-black/0 border border-white/10 rounded"
+                />
+                <textarea
+                  placeholder="message"
+                  className="h-64 p-4 bg-black/0 border border-white/10 rounded"
+                />
+              </form>
+            </div> */}
           </div>
         </div>
         <div className="bg-black py-4 mt-8 border-t border-white/10">

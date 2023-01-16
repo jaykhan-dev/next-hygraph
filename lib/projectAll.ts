@@ -9,6 +9,7 @@ const GET_PROJECTS = gql`
       slug
       excerpt
       category
+      tags
       projectImage {
         url
       }

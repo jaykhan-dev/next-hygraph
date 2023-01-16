@@ -7,6 +7,7 @@ import client from "../lib/apollo";
 import { motion } from "framer-motion";
 // import router from "next/router";
 import { useState, useEffect } from "react";
+import { ThemeProvider } from "next-themes";
 
 const variants = {
   pageInitial: {
@@ -85,7 +86,9 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             exit="pageExit"
             variants={variants}
           >
-            <Component {...pageProps} />
+            <ThemeProvider attribute="class">
+              <Component {...pageProps} />
+            </ThemeProvider>
           </motion.div>
         </ApolloProvider>
         <Footer />

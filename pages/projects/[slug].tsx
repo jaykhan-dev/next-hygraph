@@ -62,6 +62,7 @@ const Project: NextPage = ({ project, children }: any) => {
     <>
       <Head>
         <title>{project.title}</title>
+        <meta title="description" content={project.excerpt} />
       </Head>
       <div className="grid place-items-center relative bg-gradient-to-b from-black to-zinc-900 p-4">
         <motion.div
@@ -94,6 +95,16 @@ const Project: NextPage = ({ project, children }: any) => {
             }}
           /> */}
           <button className="badge badge-accent">{project.category}</button>
+          <div className="flex my-4">
+            {project.tags.map((tag: any) => (
+              <p
+                key={tag}
+                className="p-2 border border-white/10 rounded mx-2 my-2"
+              >
+                {tag}
+              </p>
+            ))}
+          </div>
 
           {/* RICH TEXT HYGRAPH */}
           <RichText
