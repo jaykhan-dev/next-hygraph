@@ -90,11 +90,11 @@ const Projects: NextPage = ({ projects }: any) => {
                   <h1 className="text-3xl font-bold my-2">{project.title}</h1>
                   <p className="my-4">{project.excerpt}</p>
                   <p className="badge badge-primary">{project.category}</p>
-                  <div className="flex space-x-2 mt-4">
+                  <div className="flex flex-wrap mt-4">
                     {project.tags.map((tag: string) => (
                       <p
                         key={tag}
-                        className="border p-1 rounded border-white/10"
+                        className="border p-1 m-1 rounded border-white/10"
                       >
                         {tag}
                       </p>

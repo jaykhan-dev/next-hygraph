@@ -95,12 +95,9 @@ const Project: NextPage = ({ project, children }: any) => {
             }}
           /> */}
           <button className="badge badge-accent">{project.category}</button>
-          <div className="flex my-4">
+          <div className="lg:flex my-4">
             {project.tags.map((tag: any) => (
-              <p
-                key={tag}
-                className="p-2 border border-white/10 rounded mx-2 my-2"
-              >
+              <p key={tag} className="p-2 border border-white/10 rounded m-2">
                 {tag}
               </p>
             ))}
