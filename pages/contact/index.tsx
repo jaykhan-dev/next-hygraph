@@ -1,6 +1,5 @@
-import { useMutation } from "@apollo/client";
+import { gql, useMutation } from "@apollo/client";
 import { useState } from "react";
-import CONTACT from "../../lib/createContact";
 
 /*
 type Contact = {
@@ -10,6 +9,17 @@ type Contact = {
   message: string;
 };
 */
+
+const CONTACT = gql`
+  mutation CreateContact($name: String!, $email: String!, $message: String!) {
+    createContact(data: { name: $name, email: $email, message: $message }) {
+      id
+      name
+      email
+      message
+    }
+  }
+`;
 
 export default function Footer() {
   const [name, setName] = useState<string>("");
