@@ -110,6 +110,7 @@ const Resume: NextPage = ({ jobs }: any) => {
               </div>
               <ul>
                 <li>HTML/CSS/JS</li>
+                <li>Typescript</li>
                 <li>Next JS</li>
                 <li>Sveltekit</li>
                 <li>Tailwind CSS</li>
@@ -117,6 +118,8 @@ const Resume: NextPage = ({ jobs }: any) => {
                 <li>REST API</li>
                 <li>PostgreSQL</li>
                 <li>WordPress</li>
+                <li>Adobe CC</li>
+                <li>Figma</li>
               </ul>
             </div>
             <div className="border-t border-white/10 py-8">

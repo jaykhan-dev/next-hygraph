@@ -106,9 +106,14 @@ const Home: NextPage = ({ posts }: any) => {
               <p className="text-2xl my-8 text-center">
                 I design and build user interfaces and digital assets
               </p>
-              <Link href="/projects">
-                <button className="btn btn-primary">See Projects</button>
-              </Link>
+              <div className="flex space-x-2">
+                <Link href="/projects">
+                  <button className="btn btn-primary">See Projects</button>
+                </Link>
+                <Link href="/contact">
+                  <button className="btn btn-outline">Make an Inquiry</button>
+                </Link>
+              </div>
             </motion.div>
             <motion.div
               initial="hidden"

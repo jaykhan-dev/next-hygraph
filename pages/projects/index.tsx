@@ -61,7 +61,7 @@ const Projects: NextPage = ({ projects }: any) => {
 
           {/* SEARCH */}
 
-          {/* <div className="my-2 lg:w-1/4 mx-auto">
+          <div className="my-2 lg:w-1/4 mx-auto">
             <form action="" className="w-full flex justify-center">
               <input
                 type="text"
@@ -71,7 +71,7 @@ const Projects: NextPage = ({ projects }: any) => {
                 className="p-4 border border-white/10 rounded-xl w-full text-center bg-black/0"
               />
             </form>
-          </div> */}
+          </div>
 
           <div className="lg:w-2/3 mx-auto py-20 grid lg:grid-cols-3 gap-4">
             {projects.map((project: any) => (

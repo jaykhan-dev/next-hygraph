@@ -1,7 +1,15 @@
 import Image from "next/image";
 import FooterGraphic from "../public/images/footer-graphic.png";
-import { AtSymbolIcon } from "@heroicons/react/24/outline";
 import Marquee from "react-fast-marquee";
+
+/*
+type Contact = {
+  id: string;
+  name: string;
+  email: string;
+  message: string;
+};
+*/
 
 export default function Footer() {
   return (
@@ -62,6 +70,8 @@ export default function Footer() {
                 <i className="fa-brands fa-linkedin hover:scale-110 duration-300"></i>
               </a>
             </div>
+            {/* SPLINE */}
+
             <div className="h-96 my-8 border border-white/10 rounded shadow-xl">
               <iframe
                 src="https://my.spline.design/interactivespherescopy-397558837af7b3db9602d1bcc603c9f9/"
@@ -75,27 +85,45 @@ export default function Footer() {
 
             {/* <div>
               <form
+                onSubmit={(e) => {
+                  e.preventDefault();
+                  createMutation({
+                    variables: { name: name, email: email, message: message },
+                  });
+                }}
                 action=""
                 className="grid space-y-4 py-4 rounded h-full font-mono"
               >
                 <input
                   type="text"
-                  name=""
-                  id=""
+                  value={name}
+                  onChange={(e: any) => {
+                    setName(e.target.value);
+                  }}
+                  id="name"
                   placeholder="name"
                   className="p-4 bg-black/0 border border-white/10 rounded"
                 />
                 <input
                   type="text"
-                  name=""
-                  id=""
+                  value={email}
+                  onChange={(e: any) => {
+                    setEmail(e.target.value);
+                  }}
+                  id="email"
                   placeholder="email"
                   className="p-4 bg-black/0 border border-white/10 rounded"
                 />
                 <textarea
+                  id="message"
+                  value={message}
+                  onChange={(e: any) => {
+                    setMessage(e.target.value);
+                  }}
                   placeholder="message"
                   className="h-64 p-4 bg-black/0 border border-white/10 rounded"
                 />
+                <button className="btn btn-primary lg:w-1/4">Submit</button>
               </form>
             </div> */}
           </div>
