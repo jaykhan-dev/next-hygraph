@@ -69,7 +69,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             width: 75,
             x: mousePosition.x - 36,
             y: mousePosition.y - 36,
-            backgroundColor: "blue",
+            backgroundColor: "#0000FF",
             opacity: 0.5,
             mixBlendMode: "difference",
           },

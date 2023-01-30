@@ -1,5 +1,6 @@
-import { gql, useMutation } from "@apollo/client";
+import { useMutation } from "@apollo/client";
 import { useState } from "react";
+import CONTACT from "../../lib/createContact";
 
 /*
 type Contact = {
@@ -10,25 +11,31 @@ type Contact = {
 };
 */
 
-const CONTACT = gql`
-  mutation CreateContact($name: String!, $email: String!, $message: String!) {
-    createContact(data: { name: $name, email: $email, message: $message }) {
-      id
-      name
-      email
-      message
-    }
-  }
-`;
-
 export default function Footer() {
   const [name, setName] = useState<string>("");
   const [email, setEmail] = useState<string>("");
   const [message, setMessage] = useState<string>("");
+  const [formSuccess, setFormSuccess] = useState<boolean>(false);
+  const [formSuccessMessage, setFormSuccessMessage] = useState<string>("");
   const [createMutation, { data, loading, error }] = useMutation(CONTACT);
 
   if (loading) return <div>Loading!</div>;
   if (error) return <div>There was an error!</div>;
+
+  const handleSubmit = async (event: any) => {
+    event.preventDefault();
+    createMutation({
+      variables: {
+        name: name,
+        email: email,
+        message: message,
+      },
+    });
+    alert("Message sent!");
+    setName("");
+    setEmail("");
+    setMessage("");
+  };
 
   return (
     <footer className="">
@@ -63,13 +70,10 @@ export default function Footer() {
 
             <div className="lg:w-2/3 mx-auto my-12">
               <form
-                onSubmit={(e) => {
-                  e.preventDefault();
-                  createMutation({
-                    variables: { name: name, email: email, message: message },
-                  });
-                }}
+                method="POST"
+                onSubmit={handleSubmit}
                 action=""
+                id="contactForm"
                 className="grid space-y-4 py-4 rounded h-full font-mono"
               >
                 <input
@@ -78,16 +82,18 @@ export default function Footer() {
                   onChange={(e: any) => {
                     setName(e.target.value);
                   }}
+                  required
                   id="name"
                   placeholder="name"
                   className="p-4 bg-black/0 border border-white/10 rounded hover:border-white/100 duration-300"
                 />
                 <input
-                  type="text"
+                  type="email"
                   value={email}
                   onChange={(e: any) => {
                     setEmail(e.target.value);
                   }}
+                  required
                   id="email"
                   placeholder="email"
                   className="p-4 bg-black/0 border border-white/10 rounded hover:border-white/100 duration-300"
@@ -98,11 +104,14 @@ export default function Footer() {
                   onChange={(e: any) => {
                     setMessage(e.target.value);
                   }}
+                  required
                   placeholder="message"
                   className="h-64 p-4 bg-black/0 border border-white/10 rounded hover:border-white/100 duration-300"
                 />
                 <div className="flex justify-center">
-                  <button className="btn btn-primary my-12">Submit</button>
+                  <button className="btn btn-primary my-12" type="submit">
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
