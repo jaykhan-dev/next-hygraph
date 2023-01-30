@@ -1,5 +1,4 @@
 import { gql } from "@apollo/client";
-import client from "./apollo";
 
 const CONTACT = gql`
   mutation CreateContact($name: String!, $email: String!, $message: String!) {

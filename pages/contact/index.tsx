@@ -1,9 +1,6 @@
-import Image from "next/image";
-
 import { useMutation } from "@apollo/client";
 import { useState } from "react";
 import CONTACT from "../../lib/createContact";
-import client from "../../lib/apollo";
 
 /*
 type Contact = {
