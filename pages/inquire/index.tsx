@@ -39,25 +39,8 @@ export default function Footer() {
 
   return (
     <footer className="">
-      {/* <div className="lg:h-screen bg-gradient-to-b from-zinc-800 to-zinc-900">
-        <iframe
-          src="https://my.spline.design/interactivespherescopy-397558837af7b3db9602d1bcc603c9f9/"
-          frameBorder="0"
-          width="100%"
-          height="100%"
-        ></iframe>
-      </div> */}
       <div className="grid place-items-center bg-gradient-to-b from-black to-zinc-900 text-white">
         <div className="lg:w-2/3 mx-auto grid py-20">
-          {/* <div className="col-span-1">
-            <Image
-              src={}
-              height={800}
-              width={300}
-              alt="footer graphic"
-              className=""
-            />
-          </div> */}
           <div className="p-4">
             <div className="flex items-center space-x-2">
               {/* <AtSymbolIcon className="h-12 w-12" /> */}

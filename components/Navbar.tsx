@@ -5,6 +5,7 @@ import {
   MoonIcon,
   MusicalNoteIcon,
   ClipboardDocumentIcon,
+  QuestionMarkCircleIcon,
 } from "@heroicons/react/24/outline";
 import Image from "next/image";
 import JKLogo from "../public/images/jk-logo-blue.svg";
@@ -66,6 +67,13 @@ export default function Navbar() {
           >
             <TableCellsIcon className="h-6 w-6 text-blue-500" />
             <p className="lg:block hidden">Resume</p>
+          </Link>
+          <Link
+            href="/inquire"
+            className="flex items-center space-x-2 hover:scale-105 duration-300"
+          >
+            <QuestionMarkCircleIcon className="h-6 w-6 text-blue-500" />
+            <p className="lg:block hidden">Inquire</p>
           </Link>
 
           {/* LIGHT DARK */}

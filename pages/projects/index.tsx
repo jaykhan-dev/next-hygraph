@@ -27,7 +27,10 @@ const Projects: NextPage = ({ projects }: any) => {
     <>
       <Head>
         <title>Jay Khan Projects</title>
-        <meta title="description" content="Jay Khan work projects" />
+        <meta
+          title="description"
+          content="Jay Khan projects involving Sveltekit, NextJS, VueJS, JavaScript, Typescript, Adobe Creative Cloud, Photoshop, Illustrator"
+        />
       </Head>
 
       <div className={styles.projectBg}>

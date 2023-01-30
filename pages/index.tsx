@@ -77,7 +77,7 @@ const Home: NextPage = ({ posts }: any) => {
         <title>Jay Khan</title>
         <meta
           title="description"
-          content="I design and build user interfaces and digital assets"
+          content="Front-end Developer, graphic designer, musician, and Bitcoin Adovocate."
         />
 
         <Script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></Script>
@@ -110,7 +110,7 @@ const Home: NextPage = ({ posts }: any) => {
                 <Link href="/projects">
                   <button className="btn btn-primary">See Projects</button>
                 </Link>
-                <Link href="/contact">
+                <Link href="/inquire">
                   <button className="btn btn-outline">Make an Inquiry</button>
                 </Link>
               </div>
