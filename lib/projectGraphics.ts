@@ -4,6 +4,16 @@ const GET_GRAPHICS_PROJECTS = gql`
   query GraphicsProjects {
     projects(where: { category_contains: "Graphic" }) {
       title
+      id
+      slug
+      excerpt
+      category
+      tags
+      projectImage {
+        url
+      }
     }
   }
 `;
+
+export default GET_GRAPHICS_PROJECTS;
