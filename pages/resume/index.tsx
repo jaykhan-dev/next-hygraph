@@ -3,7 +3,7 @@ import Head from "next/head";
 import client from "../../lib/apollo";
 import { gql } from "@apollo/client";
 import type { NextPage } from "next";
-import { LanguageIcon, CodeBracketIcon } from "@heroicons/react/24/outline";
+//import { LanguageIcon, CodeBracketIcon, AcademicCapIcon } from "@heroicons/react/24/outline";
 // import Wanderer from "../../public/images/wanderer.png";
 import { motion } from "framer-motion";
 
@@ -83,7 +83,7 @@ const Resume: NextPage = ({ jobs }: any) => {
             height={200}
             alt="wanderer graphic"
           /> */}
-          <h1 className="my-4 lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
+          <h1 className="my-4 lg:text-8xl text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
             Resume
           </h1>
         </motion.div>
@@ -96,7 +96,7 @@ const Resume: NextPage = ({ jobs }: any) => {
           className="lg:w-2/3 mx-auto p-2 grid lg:grid-cols-3 gap-10"
         >
           <div className="my-8 lg:sticky top-24 lg:h-screen">
-            <h1 className="lg:text-4xl font-black">Summary</h1>
+            <h1 className="lg:text-4xl text-2xl font-black">Summary</h1>
             <p className="italic my-4">
               The two main skills I bring to the table are graphic design and
               front-end development. By staying up-to-date on modern tools like
@@ -107,7 +107,7 @@ const Resume: NextPage = ({ jobs }: any) => {
               {/* SOFTWARE */}
               <div>
                 <div className="flex items-center space-x-2">
-                  <CodeBracketIcon className="w-6 h-6" />
+                  <i className="fa-solid fa-code"></i>
                   <h2 className="text-2xl my-4">Software</h2>
                 </div>
                 <ul>
@@ -128,7 +128,7 @@ const Resume: NextPage = ({ jobs }: any) => {
               {/* LANGUAGES */}
               <div>
                 <div className="flex items-center space-x-2">
-                  <LanguageIcon className="h-6 w-6" />
+                  <i className="fa-solid fa-language"></i>
                   <h2 className="text-2xl my-4">Languages</h2>
                 </div>
                 <ul>
@@ -138,16 +138,16 @@ const Resume: NextPage = ({ jobs }: any) => {
                 </ul>
               </div>
             </div>
-            <div className="border-t border-white/10 py-8">
+            <div className="border-t border-white/10 py-8 space-y-2">
               <div className="flex items-center space-x-2">
-                <LanguageIcon className="h-6 w-6" />
-                <h2 className="text-2xl my-4">Languages</h2>
+                <i className="fa-solid fa-graduation-cap"></i>
+                <h2 className="text-2xl my-4">Education</h2>
               </div>
               <ul>
-                <li>English: Fluent</li>
-                <li>Urdu: Conversational</li>
-                <li>French: Beginner reading</li>
+                <li>Carleton University: 2007-2012</li>
+                <li>Algonquin College: 2007-2011</li>
               </ul>
+              <p className="italic">Interactive Multimedia and Design</p>
             </div>
           </div>
           <div className="lg:col-span-2 py-8">
