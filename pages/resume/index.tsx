@@ -103,24 +103,40 @@ const Resume: NextPage = ({ jobs }: any) => {
               Next JS, Sveltekit, Tailwind CSS, and Figma I strive to make
               responsive, accessible, and performant websites and applications.{" "}
             </p>
-            <div className="border-t border-white/10 py-8">
-              <div className="flex items-center space-x-2">
-                <CodeBracketIcon className="w-6 h-6" />
-                <h2 className="text-2xl my-4">Software</h2>
+            <div className="border-t border-white/10 py-8 grid lg:grid-cols-2 gap-2">
+              {/* SOFTWARE */}
+              <div>
+                <div className="flex items-center space-x-2">
+                  <CodeBracketIcon className="w-6 h-6" />
+                  <h2 className="text-2xl my-4">Software</h2>
+                </div>
+                <ul>
+                  <li>HTML/CSS/JS</li>
+                  <li>Typescript</li>
+                  <li>Next JS</li>
+                  <li>Sveltekit</li>
+                  <li>Tailwind CSS</li>
+                  <li>GraphQL</li>
+                  <li>REST API</li>
+                  <li>PostgreSQL</li>
+                  <li>WordPress</li>
+                  <li>Adobe CC</li>
+                  <li>Figma</li>
+                </ul>
               </div>
-              <ul>
-                <li>HTML/CSS/JS</li>
-                <li>Typescript</li>
-                <li>Next JS</li>
-                <li>Sveltekit</li>
-                <li>Tailwind CSS</li>
-                <li>GraphQL</li>
-                <li>REST API</li>
-                <li>PostgreSQL</li>
-                <li>WordPress</li>
-                <li>Adobe CC</li>
-                <li>Figma</li>
-              </ul>
+
+              {/* LANGUAGES */}
+              <div>
+                <div className="flex items-center space-x-2">
+                  <LanguageIcon className="h-6 w-6" />
+                  <h2 className="text-2xl my-4">Languages</h2>
+                </div>
+                <ul>
+                  <li>English: Fluent</li>
+                  <li>Urdu: Conversational</li>
+                  <li>French: Beginner reading</li>
+                </ul>
+              </div>
             </div>
             <div className="border-t border-white/10 py-8">
               <div className="flex items-center space-x-2">
