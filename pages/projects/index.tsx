@@ -13,6 +13,7 @@ import { Button } from "react-daisyui";
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import tabStyles from "../../components/radixTabs.module.css";
+import HorseGraphic from "../../public/images/horse-graphic.svg";
 
 export async function getStaticProps() {
   const { data: allData } = await client.query({
@@ -49,20 +50,21 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
         />
       </Head>
 
-      <div className={styles.projectBg}>
-        <div className="bg-gradient-to-b from-black/90 to-zinc-900 backdrop-blur-md p-4 text-white">
-          <div className="py-20 w-full text-center flex justify-center items-center space-x-1">
-            <div className="">
-              {/* <Image
-                src={Horse}
-                width={100}
+      <div className="">
+        <div className="bg-gradient-to-b from-black/90 to-zinc-900 backdrop-blur-md lg:p-0 p-4 text-white">
+          <div className={styles.projectBg}>
+            <div className="lg:w-2/3 mx-auto py-24 flex items-center justify-center relative">
+              <Image
+                src={HorseGraphic}
+                width={200}
                 height={200}
                 alt="campfire graphic"
-              /> */}
+                className="opacity-10 absolute left-0"
+              />
+              <h1 className="lg:text-8xl text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800 py-12">
+                Projects
+              </h1>
             </div>
-            <h1 className="lg:text-8xl text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
-              Projects
-            </h1>
           </div>
 
           {/* FILTER */}
@@ -75,20 +77,20 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                 >
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab1">
                     <div className="flex items-center space-x-2">
-                      <i className="fa-solid fa-list"></i>
+                      <i className="fa-solid fa-list lg:text-xl text-4xl"></i>
                       <p className="lg:flex hidden">All</p>
                     </div>
                   </Tabs.Trigger>
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab2">
                     <div className="flex items-center space-x-2">
-                      <i className="fa-solid fa-desktop"></i>
+                      <i className="fa-solid fa-desktop lg:text-xl text-4xl"></i>
                       <p className="lg:flex hidden">Front-end</p>
                     </div>
                   </Tabs.Trigger>
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab3">
                     <div className="flex items-center space-x-2">
-                      <i className="fa-solid fa-draw-polygon"></i>
-                      <p className="lg:flex hidden">Graphics</p>
+                      <i className="fa-solid fa-draw-polygon lg:text-xl text-4xl"></i>
+                      <p className="lg:flex hidden">Graphic Design</p>
                     </div>
                   </Tabs.Trigger>
                 </Tabs.List>

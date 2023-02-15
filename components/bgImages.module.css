@@ -5,9 +5,11 @@
   background-position: fixed;
 }
 
+/*
 .projectBg {
-  background-image: url("/images/horse.svg");
+  background-image: url("/images/horse-graphic.svg");
   background-repeat: no-repeat;
-  background-size: cover;
-  background-position: fixed;
+  background-size: contain;
+  background-position: left;
 }
+*/
