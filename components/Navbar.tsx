@@ -3,6 +3,7 @@ import {
   TableCellsIcon,
   SunIcon,
   MoonIcon,
+  BookOpenIcon,
   MusicalNoteIcon,
   ClipboardDocumentIcon,
   QuestionMarkCircleIcon,
@@ -74,6 +75,13 @@ export default function Navbar() {
           >
             <QuestionMarkCircleIcon className="h-6 w-6 text-blue-500" />
             <p className="lg:block hidden">Inquire</p>
+          </Link>
+          <Link
+            href="/blog"
+            className="flex items-center space-x-2 hover:scale-105 duration-300"
+          >
+            <BookOpenIcon className="h-6 w-6 text-blue-500" />
+            <p className="lg:block hidden">Blog</p>
           </Link>
 
           {/* LIGHT DARK */}
