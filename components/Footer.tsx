@@ -22,7 +22,7 @@ export default function Footer() {
           height="100%"
         ></iframe>
       </div> */}
-      <div className="grid place-items-center bg-gradient-to-b from-zinc-900 to-black text-white">
+      <div className="grid place-items-center bg-black text-white">
         <div className="lg:w-2/3 mx-auto grid lg:grid-cols-3 py-20 opacity-10 hover:opacity-100 duration-500">
           <div className="col-span-1">
             <Image

@@ -70,12 +70,12 @@ const Resume: NextPage = ({ jobs }: any) => {
           content="I'm a front-end developer using modern tools like Next JS, Sveltekit, Tailwind CSS, GraphQL, REST, Headless CMS."
         />
       </Head>
-      <div className="block bg-zinc-900">
+      <div className="block black">
         <motion.div
           initial="hidden"
           animate="visible"
           variants={headerVariants}
-          className="py-20 bg-gradient-to-b from-black to-zinc-900 w-full text-center flex justify-center items-center border-b border-white/10"
+          className="py-20 bg-black w-full text-center flex justify-center items-center border-b border-white/10"
         >
           {/* <Image
             src={Wanderer}

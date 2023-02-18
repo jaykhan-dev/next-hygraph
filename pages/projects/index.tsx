@@ -51,7 +51,7 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
       </Head>
 
       <div className="">
-        <div className="bg-gradient-to-b from-black/90 to-zinc-900 backdrop-blur-md lg:p-0 p-4 text-white">
+        <div className="lg:p-0 p-4 text-white">
           <div className={styles.projectBg}>
             <div className="lg:w-2/3 mx-auto py-24 flex items-center justify-center relative">
               <Image
@@ -61,7 +61,7 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                 alt="campfire graphic"
                 className="opacity-10 absolute left-0"
               />
-              <h1 className="lg:text-8xl text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800 py-12">
+              <h1 className="lg:text-8xl text-4xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
                 Projects
               </h1>
             </div>

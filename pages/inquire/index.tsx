@@ -39,7 +39,7 @@ export default function Footer() {
 
   return (
     <footer className="">
-      <div className="grid place-items-center bg-gradient-to-b from-black to-zinc-900 text-white">
+      <div className="grid place-items-center text-white">
         <div className="lg:w-2/3 mx-auto grid py-20">
           <div className="p-4">
             <div className="flex items-center space-x-2">

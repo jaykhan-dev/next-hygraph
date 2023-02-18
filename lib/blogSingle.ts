@@ -9,6 +9,7 @@ const GET_SINGLE_BLOG = gql`
       excerpt
       content {
         html
+        raw
       }
     }
   }
