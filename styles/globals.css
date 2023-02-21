@@ -42,3 +42,7 @@ body {
   pointer-events: none;
   opacity: 20%;
 }
+
+.active {
+  colour: blue;
+}

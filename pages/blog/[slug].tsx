@@ -44,7 +44,7 @@ const Post: NextPage = ({ post, children }: any) => {
             <p className="font-mono">{post.date}</p>
             <p className="text-xl">{post.excerpt}</p>
             <div className="flex items-center flex-wrap">
-              {post.tags.map((tag: any) => (
+              {post.tags.map((tag: string) => (
                 <p className="p-1 m-1 border rounded">{tag}</p>
               ))}
             </div>
