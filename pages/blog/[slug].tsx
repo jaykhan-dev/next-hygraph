@@ -41,7 +41,22 @@ const Post: NextPage = ({ post, children }: any) => {
         <div className="py-20 lg:w-1/2 mx-auto pt-24">
           <div className="border border-blue-900/40 shadow-xl rounded-lg p-4">
             <h1 className="lg:text-6xl font-bold text-3xl">{post.title}</h1>
+            <p className="font-mono">{post.date}</p>
             <p className="text-xl">{post.excerpt}</p>
+            <div className="flex items-center flex-wrap">
+              {post.tags.map((tag: any) => (
+                <p className="p-1 m-1 border rounded">{tag}</p>
+              ))}
+            </div>
+          </div>
+          <div className="grid place-items-center my-4 rounded-lg">
+            <Image
+              src={post.coverImage.url}
+              width={1200}
+              height={500}
+              alt="Post Image"
+              className="rounded-lg"
+            />
           </div>
           <RichText
             content={post.content?.raw}

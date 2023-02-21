@@ -6,7 +6,12 @@ const GET_SINGLE_BLOG = gql`
       title
       id
       slug
+      tags
       excerpt
+      date
+      coverImage {
+        url
+      }
       content {
         html
         raw

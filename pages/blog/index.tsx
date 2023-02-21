@@ -37,22 +37,24 @@ const Blogs: NextPage = ({ blogs }: any) => {
           <div className="py-20 grid lg:grid-cols-2">
             {blogs.map((blog: any) => (
               <Link href={`/blog/${blog.slug}`} key={blog.id} className="">
-                <div className="border border-blue-900/40 rounded p-2 duration-300 hover:scale-95">
+                <div className="border border-blue-900/40 rounded p-2 duration-300 hover:scale-95 flex space-x-2">
                   <Image
                     src={blog.coverImage.url}
-                    width={700}
+                    width={200}
                     height={200}
                     alt="Blog Image"
                   />
-                  <div className="my-2">
-                    <h2 className="lg:text-4xl font-bold text-2xl">
-                      {blog.title}
-                    </h2>
+                  <div>
+                    <div className="mb-2">
+                      <h2 className="lg:text-4xl font-bold text-2xl">
+                        {blog.title}
+                      </h2>
 
-                    <p className="font-mono">{blog.date}</p>
+                      <p className="font-mono">{blog.date}</p>
+                    </div>
+                    {/* <p className="my-2">{blog.excerpt}</p> */}
                   </div>
-                  <p className="my-2">{blog.excerpt}</p>
-                  <div className="flex flex-wrap">
+                  {/* <div className="flex flex-wrap">
                     {blog.tags.map((tag: string) => (
                       <p
                         key={tag}
@@ -61,7 +63,7 @@ const Blogs: NextPage = ({ blogs }: any) => {
                         {tag}
                       </p>
                     ))}
-                  </div>
+                  </div> */}
                 </div>
               </Link>
             ))}

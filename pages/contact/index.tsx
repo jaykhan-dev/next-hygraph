@@ -41,7 +41,6 @@ export default function Footer() {
     <footer className="bg-white text-blue-900 lg:p-0 p-4">
       <div className="lg:w-2/3 mx-auto">
         <div className="pt-24">
-          {/* <AtSymbolIcon className="h-12 w-12" /> */}
           <h2 className="lg:text-4xl font-black w-full">Inquiry</h2>
           <div className="my-4 py-4 px-4 border border-blue-900/40 shadow-xl rounded-lg">
             <h2 className="text-4xl font-bold">Get in touch!</h2>
@@ -52,7 +51,10 @@ export default function Footer() {
           </div>
         </div>
         <div className="grid lg:grid-cols-3 gap-4 py-20">
-          <div className="py-8 text-2xl space-y-4 border border-blue-900/40 p-4 rounded shadow-xl bg-gray-100">
+          <div className="py-8 space-y-4 border border-blue-900/40 p-4 rounded shadow-xl bg-gray-100">
+            <p className="text-2xl">
+              Contact me directly through the following channels.
+            </p>
             <div className="flex items-center space-x-4">
               <i className="fa-solid fa-envelope"></i>
               <p>jaykhan.sound@gmail.com</p>
@@ -63,15 +65,13 @@ export default function Footer() {
               <p>613-707-0696</p>
             </div>
 
-            <div className="flex items-center space-x-4">
+            <a
+              href="https://www.twitter.com/j"
+              className="flex items-center space-x-4"
+            >
               <i className="fa-brands fa-twitter"></i>
               <p>@j__khan</p>
-            </div>
-
-            <div className="flex items-center space-x-4">
-              <i className="fa-brands fa-bitcoin"></i>
-              <p>nPub</p>
-            </div>
+            </a>
           </div>
 
           {/* CONTACT FORM */}
