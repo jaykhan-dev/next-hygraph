@@ -5,17 +5,17 @@ import Loading from "./loading";
 const Home: NextPage = () => {
   const [isLoading, setLoading] = useState<boolean>(true);
 
-  /*
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 3000);
+    }, 1000);
   }, []);
-  */
 
+  /*
   useEffect(() => {
     setLoading(false);
   }, []);
+  */
 
   return (
     <>
