@@ -57,7 +57,9 @@ export default function Footer() {
             </p>
             <div className="flex items-center space-x-4">
               <i className="fa-solid fa-envelope"></i>
-              <p>jaykhan.sound@gmail.com</p>
+              <a href="mailto:jaykhan.sound@gmail.com">
+                jaykhan.sound@gmail.com
+              </a>
             </div>
 
             <div className="flex items-center space-x-4">
@@ -66,7 +68,9 @@ export default function Footer() {
             </div>
 
             <a
-              href="https://www.twitter.com/j"
+              href="https://www.twitter.com/j__khan"
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center space-x-4"
             >
               <i className="fa-brands fa-twitter"></i>
