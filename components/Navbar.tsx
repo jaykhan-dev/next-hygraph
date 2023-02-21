@@ -41,67 +41,49 @@ export default function Navbar() {
         <div>
           <Link
             href="/"
-            className="flex items-center space-x-2 hover:scale-105 duration-300"
+            className="flex items-center space-x-2 hover:text-blue-600 duration-300"
           >
-            <Image src={JKLogo} width={35} height={35} alt="jk logo" />
+            <Image src={JKLogo} width={50} height={50} alt="jk logo" />
             {/* <p className="lg:block hidden">Jay</p> */}
           </Link>
         </div>
-        <div className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 text-lg">
           <Link
             href="/projects"
-            className="flex items-center space-x-2 hover:scale-105 duration-300"
+            className="flex items-center space-x-2 hover:text-blue-600 duration-300"
           >
-            <ClipboardDocumentIcon className="h-6 w-6 text-blue-500" />
+            <ClipboardDocumentIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
             <p className="lg:block hidden">Projects</p>
           </Link>
           <Link
             href="/music"
-            className="flex items-center space-x-2 hover:scale-105 duration-300"
+            className="flex items-center space-x-2 hover:text-blue-600 duration-300"
           >
-            <MusicalNoteIcon className="h-6 w-6 text-blue-500" />
+            <MusicalNoteIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
             <p className="lg:block hidden">Music</p>
           </Link>
           <Link
             href="/resume"
-            className="flex items-center space-x-2 hover:scale-105 duration-300"
+            className="flex items-center space-x-2 hover:text-blue-600 duration-300"
           >
-            <TableCellsIcon className="h-6 w-6 text-blue-500" />
+            <TableCellsIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
             <p className="lg:block hidden">Resume</p>
           </Link>
           <Link
-            href="/inquire"
-            className="flex items-center space-x-2 hover:scale-105 duration-300"
-          >
-            <QuestionMarkCircleIcon className="h-6 w-6 text-blue-500" />
-            <p className="lg:block hidden">Inquire</p>
-          </Link>
-          <Link
             href="/blog"
-            className="flex items-center space-x-2 hover:scale-105 duration-300"
+            className="flex items-center space-x-2 hover:text-blue-600 duration-300"
           >
-            <BookOpenIcon className="h-6 w-6 text-blue-500" />
+            <BookOpenIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
             <p className="lg:block hidden">Blog</p>
           </Link>
-
-          {/* LIGHT DARK */}
-          {/* <div>
-      
-            <button
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              {theme === "dark" ? "light" : "dark"}
-            </button>
-          </div> */}
+          <Link
+            href="/contact"
+            className="flex items-center hover:scale-95 duration-300 bg-sky-400 text-black px-2 p-2 rounded"
+          >
+            <QuestionMarkCircleIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
+            <p className="lg:block hidden">Contact</p>
+          </Link>
         </div>
-        {/* <Link href="/tech-blog" className="flex items-center space-x-2">
-          <ComputerDesktopIcon className="h-6 w-6 text-blue-500" />
-          <p className="lg:block hidden">Tech Blog</p>
-        </Link> */}
-        {/* <Link href="/contact" className="flex items-center space-x-2">
-          <AtSymbolIcon className="h-6 w-6 text-blue-500" />
-          <p className="lg:block hidden">Contact</p>
-        </Link> */}
       </div>
     </motion.nav>
   );

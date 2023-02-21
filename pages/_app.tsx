@@ -71,7 +71,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             y: mousePosition.y - 36,
             backgroundColor: "#0000FF",
             opacity: 0.5,
-            mixBlendMode: "difference",
+            mixBlendMode: "multiply",
           },
         }}
         animate={cursorVariant}
@@ -91,6 +91,7 @@ function MyApp({ Component, pageProps, router }: AppProps) {
             </ThemeProvider>
           </motion.div>
         </ApolloProvider>
+
         <Footer />
       </div>
     </>

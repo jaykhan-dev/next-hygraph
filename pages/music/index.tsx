@@ -63,27 +63,28 @@ const Music: NextPage = ({ tracks }: any) => {
     <>
       <Head>
         <title>Jay Khan Music</title>
+        <meta
+          title="description"
+          content="Jay Khan Sound.  Music Production.  Ableton."
+        />
       </Head>
-      <div id="musicIndex" className="text-white">
+      <div id="musicIndex" className="bg-white text-blue-900 lg:p-0 p-4">
         <div className="lg:h-screen">
-          <div className="text-center lg:w-2/3 mx-auto">
+          <div className="lg:w-2/3 mx-auto">
             <motion.div
               initial="hidden"
               animate="visible"
               variants={headerVariants}
-              className="py-20 w-full text-center flex justify-center items-center space-x-1"
+              className="pt-24 w-full"
             >
-              <div className="my-16">
-                {/* <Image
-                src={Horse}
-                width={100}
-                height={200}
-                alt="campfire graphic"
-              /> */}
+              <h1 className="lg:text-4xl font-black">Music</h1>
+              <div className="my-4 p-4 rounded border border-blue-900/40 shadow-xl">
+                <h2 className="text-4xl font-bold">Sound Production</h2>
+                <p>
+                  I've been producing music since 2007. I'm making plans on
+                  releasing new content asap.
+                </p>
               </div>
-              <h1 className="lg:text-8xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
-                Music
-              </h1>
             </motion.div>
 
             {/* data */}
@@ -91,22 +92,29 @@ const Music: NextPage = ({ tracks }: any) => {
               initial="hidden"
               animate="visible"
               variants={textVariants}
-              className="p-4"
+              className="grid gap-4 mt-24 h-full"
             >
-              {tracks.map((track: any) => (
-                <div
-                  key={track.id}
-                  className="lg:flex items-center justify-between border-b border-white/10 py-4 opacity-50 hover:opacity-100 duration-300"
-                >
-                  <h2 className="font-bold text-xl text-left">{track.title}</h2>
+              {/* <div className="border border-blue-900/40 p-4 shadow-xl bg-gray-100 rounded my-2 sticky top-24">
+                <h2>Album</h2>
+              </div> */}
+              <div className="col-span">
+                {tracks.map((track: any) => (
+                  <div
+                    key={track.id}
+                    className="lg:flex items-center justify-between border border-blue-900/40 rounded px-4 bg-gray-100 hover:shadow-xl py-4 opacity-80 hover:opacity-100 duration-300 my-2"
+                  >
+                    <h2 className="font-bold text-xl text-left">
+                      {track.title}
+                    </h2>
 
-                  {track.track.map((audio: any) => (
-                    <div key={audio.id}>
-                      <audio controls src={audio.url}></audio>
-                    </div>
-                  ))}
-                </div>
-              ))}
+                    {track.track.map((audio: any) => (
+                      <div key={audio.id}>
+                        <audio controls src={audio.url}></audio>
+                      </div>
+                    ))}
+                  </div>
+                ))}
+              </div>
             </motion.div>
           </div>
         </div>

@@ -1,46 +1,28 @@
-@import url("https://fonts.googleapis.com/css2?family=Martian+Mono&family=Megrim&family=Plaster&family=Questrial&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Chonburi&family=Darker+Grotesque&family=Syncopate:wght@400;700&display=swap");
+
 /*
-font-family: 'Martian Mono', monospace;
-font-family: 'Megrim', cursive;
-font-family: 'Plaster', cursive;
-font-family: 'Questrial', sans-serif;
+font-family: 'Chonburi', cursive;
+font-family: 'Darker Grotesque', sans-serif;
+font-family: 'Syncopate', sans-serif;
 */
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
-  body {
-    @apply bg-gray-50 text-gray-900 dark:bg-black dark:text-gray-100;
-    @apply min-h-screen;
-  }
-
-  ::selection {
-    @apply text-white bg-indigo-500;
-  }
-
-  .btn {
-    @apply inline-block px-5 py-3 rounded-lg hover:bg-indigo-600 transition duration-300 shadow-lg bg-indigo-500 text-white capitalize tracking-wider font-semibold text-sm sm:text-xl focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 whitespace-nowrap;
-  }
-}
-
 h1 {
-  font-family: "Prompt", sans-serif;
 }
 
 a,
 button {
-  font-family: "Martian Mono", monospace;
 }
 
-article,
+h2,
+h3,
 p {
-  font-family: "Questrial", sans-serif;
 }
 
 .logo {
-  font-family: "Megrim", cursive;
 }
 
 body {
@@ -50,12 +32,13 @@ body {
 }
 
 .cursor {
-  background-color: #111;
-  height: 28px;
-  width: 28px;
+  background-color: #00ff00;
+  height: 20px;
+  width: 20px;
   border-radius: 50%;
   position: fixed;
   top: 0;
   left: 0;
   pointer-events: none;
+  opacity: 20%;
 }

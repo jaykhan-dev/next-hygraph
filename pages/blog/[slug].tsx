@@ -37,34 +37,36 @@ const Post: NextPage = ({ post, children }: any) => {
         <meta title="description" content={post.excerpt} />
       </Head>
 
-      <div className="py-20 lg:w-1/2 mx-auto">
-        <div className="border-b py-4">
-          <h1 className="lg:text-6xl font-bold text-3xl">{post.title}</h1>
-          <p className="text-xl">{post.excerpt}</p>
+      <div className="bg-white text-blue-900 lg:p-0 p-4">
+        <div className="py-20 lg:w-1/2 mx-auto pt-24">
+          <div className="border border-blue-900/40 shadow-xl rounded-lg p-4">
+            <h1 className="lg:text-6xl font-bold text-3xl">{post.title}</h1>
+            <p className="text-xl">{post.excerpt}</p>
+          </div>
+          <RichText
+            content={post.content?.raw}
+            renderers={{
+              h2: ({ children }: any) => (
+                <h2 className="text-4xl font-bold mt-4 py-4">{children}</h2>
+              ),
+              h3: ({ children }) => <h3 className="text-2xl">{children}</h3>,
+              p: ({ children }) => (
+                <p className="my-4 leading-loose">{children}</p>
+              ),
+              blockquote: ({ children }) => (
+                <blockquote className="p-4 border-l-4 text-2xl italic">
+                  {children}
+                </blockquote>
+              ),
+              li: ({ children }) => <li className="my-2">&#187; {children}</li>,
+              code_block: ({ children }) => (
+                <pre className="bg-gray-100 rounded shadow-xl p-4 overflow-x-scroll">
+                  <code className="language-javascript">{children}</code>
+                </pre>
+              ),
+            }}
+          />
         </div>
-        <RichText
-          content={post.content?.raw}
-          renderers={{
-            h2: ({ children }: any) => (
-              <h2 className="text-4xl font-bold mt-4 py-4">{children}</h2>
-            ),
-            h3: ({ children }) => <h3 className="text-2xl">{children}</h3>,
-            p: ({ children }) => (
-              <p className="my-4 leading-loose">{children}</p>
-            ),
-            blockquote: ({ children }) => (
-              <blockquote className="p-4 border-l-4 text-2xl italic">
-                {children}
-              </blockquote>
-            ),
-            li: ({ children }) => <li className="my-2">&#187; {children}</li>,
-            code: ({ children }) => (
-              <p className="text-2xl p-4 bg-gray-900 border rounded">
-                {children}
-              </p>
-            ),
-          }}
-        />
       </div>
     </>
   );

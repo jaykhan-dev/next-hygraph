@@ -70,24 +70,7 @@ const Resume: NextPage = ({ jobs }: any) => {
           content="I'm a front-end developer using modern tools like Next JS, Sveltekit, Tailwind CSS, GraphQL, REST, Headless CMS."
         />
       </Head>
-      <div className="block black">
-        <motion.div
-          initial="hidden"
-          animate="visible"
-          variants={headerVariants}
-          className="py-20 bg-black w-full text-center flex justify-center items-center border-b border-white/10"
-        >
-          {/* <Image
-            src={Wanderer}
-            width={200}
-            height={200}
-            alt="wanderer graphic"
-          /> */}
-          <h1 className="my-4 lg:text-8xl text-6xl font-black bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-blue-800">
-            Resume
-          </h1>
-        </motion.div>
-
+      <div className="bg-white text-blue-900 py-4">
         {/* DATA */}
         <motion.div
           initial="hidden"
@@ -95,15 +78,15 @@ const Resume: NextPage = ({ jobs }: any) => {
           variants={textVariants}
           className="lg:w-2/3 mx-auto p-2 grid lg:grid-cols-3 gap-10"
         >
-          <div className="my-8 lg:sticky top-24 lg:h-screen">
-            <h1 className="lg:text-4xl text-2xl font-black">Summary</h1>
+          <div className="my-8 lg:sticky top-24 lg:h-screen space-y-4 lg:pt-0 pt-20">
+            <h1 className="lg:text-2xl text-xl font-black">Summary</h1>
             <p className="italic my-4">
               The two main skills I bring to the table are graphic design and
               front-end development. By staying up-to-date on modern tools like
               Next JS, Sveltekit, Tailwind CSS, and Figma I strive to make
               responsive, accessible, and performant websites and applications.{" "}
             </p>
-            <div className="border-t border-white/10 py-8 grid lg:grid-cols-2 gap-2">
+            <div className="border border-blue-900/40 grid lg:grid-cols-2 gap-2 py-4 p-4 rounded-lg shadow-xl bg-gray-100">
               {/* SOFTWARE */}
               <div>
                 <div className="flex items-center space-x-2">
@@ -138,7 +121,7 @@ const Resume: NextPage = ({ jobs }: any) => {
                 </ul>
               </div>
             </div>
-            <div className="border-t border-white/10 py-8 space-y-2">
+            <div className="border border-blue-900/40 rounded-lg bg-gray-100 shadow-xl space-y-2 p-4">
               <div className="flex items-center space-x-2">
                 <i className="fa-solid fa-graduation-cap"></i>
                 <h2 className="text-2xl my-4">Education</h2>
@@ -150,12 +133,12 @@ const Resume: NextPage = ({ jobs }: any) => {
               <p className="italic">Interactive Multimedia and Design</p>
             </div>
           </div>
-          <div className="lg:col-span-2 py-8">
-            <h1 className="text-4xl font-bold">Work Experience</h1>
+          <div className="lg:col-span-2 mt-20">
+            <h1 className="text-5xl font-bold">Work Experience</h1>
             {jobs.map((job: any) => (
               <div
                 key={job.id}
-                className="p-4 py-8 border border-white/20 rounded my-4"
+                className="p-4 py-8 border border-blue-900/40 shadow-xl rounded-lg my-4"
               >
                 <h1 className="text-2xl font-bold">{job.title}</h1>
                 <p className="text-6xl my-4">{job.company}</p>
