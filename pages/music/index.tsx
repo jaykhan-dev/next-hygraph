@@ -8,25 +8,11 @@ import styles from "../../components/bgImages.module.css";
 import * as Tabs from "@radix-ui/react-tabs";
 import tabStyles from "../../components/radixTabs.module.css";
 import Link from "next/link";
+import { MUSIC_TRACKS } from "../../lib/musicQueries";
 
 export async function getStaticProps() {
   const { data } = await client.query({
-    query: gql`
-      query allMusic {
-        tracks {
-          title
-          id
-          slug
-          producer {
-            id
-          }
-          track {
-            url
-            id
-          }
-        }
-      }
-    `,
+    query: MUSIC_TRACKS,
   });
 
   return {

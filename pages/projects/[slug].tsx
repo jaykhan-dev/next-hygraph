@@ -5,7 +5,7 @@ import Image from "next/image";
 import { NextPage } from "next";
 import { motion } from "framer-motion";
 import { RichText } from "@graphcms/rich-text-react-renderer";
-import GET_SINGLE_PROJECT from "../../lib/projectWebSingle";
+import { GET_SINGLE_PROJECT } from "../../lib/projectQueries";
 
 export async function getStaticProps({ params }: any) {
   const response = await client.query({

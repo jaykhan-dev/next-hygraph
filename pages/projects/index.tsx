@@ -5,13 +5,16 @@ import Image from "next/image";
 import Link from "next/link";
 import { NextPage } from "next";
 import styles from "../../components/bgImages.module.css";
-import GET_PROJECTS from "../../lib/projectAll";
-import GET_GRAPHICS_PROJECTS from "../../lib/projectGraphics";
-import GET_WEB_PROJECTS from "../../lib/projectWeb";
+
 import { Button } from "react-daisyui";
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import tabStyles from "../../components/radixTabs.module.css";
+import {
+  GET_GRAPHICS_PROJECTS,
+  GET_PROJECTS,
+  GET_WEB_PROJECTS,
+} from "../../lib/projectQueries";
 
 export async function getStaticProps() {
   const { data: allData } = await client.query({
