@@ -2,6 +2,7 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import { useState, useEffect, Suspense } from "react";
 import Loading from "./loading";
+
 const Home: NextPage = () => {
   const [isLoading, setLoading] = useState<boolean>(true);
 

@@ -5,11 +5,30 @@
   background-position: fixed;
 }
 
-/*
 .projectBg {
-  background-image: url("/images/horse-graphic.svg");
+  background-image: url("/images/colour-mountain.jpg");
   background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left;
+  background-size: cover;
+  background-position: center;
 }
-*/
+
+.musicBg {
+  background-image: url("/images/wanderer-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% 30%;
+}
+
+.blogBg {
+  background-image: url("/images/landscape-planets.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% 30%;
+}
+
+.contactBg {
+  background-image: url("/images/cool-bird-wallpaper.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 40% 30%;
+}

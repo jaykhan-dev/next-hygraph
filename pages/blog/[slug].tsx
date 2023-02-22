@@ -2,8 +2,11 @@ import client from "../../lib/apollo";
 import { NextPage } from "next";
 import Head from "next/head";
 import Image from "next/image";
-import GET_SINGLE_BLOG from "../../lib/blogSingle";
+import { SINGLE_BLOG } from "../../lib/blogQueries";
 import { RichText } from "@graphcms/rich-text-react-renderer";
+import "prismjs/themes/prism-tomorrow.css";
+import { useEffect } from "react";
+import Prism from "prismjs";
 
 export async function getStaticPaths() {
   const paths: any = [];
@@ -15,7 +18,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }: any) {
   const response = await client.query({
-    query: GET_SINGLE_BLOG,
+    query: SINGLE_BLOG,
     variables: {
       slug: params.slug,
     },
@@ -30,6 +33,10 @@ export async function getStaticProps({ params }: any) {
 }
 
 const Post: NextPage = ({ post, children }: any) => {
+  useEffect(() => {
+    Prism.highlightAll();
+  }, []);
+
   return (
     <>
       <Head>
@@ -39,10 +46,10 @@ const Post: NextPage = ({ post, children }: any) => {
 
       <div className="bg-white text-blue-900 lg:p-0 p-4">
         <div className="py-20 lg:w-1/2 mx-auto pt-24">
-          <div className="border border-blue-900/40 shadow-xl rounded-lg p-4">
+          <div className="border-b py-8">
             <h1 className="lg:text-6xl font-bold text-3xl">{post.title}</h1>
-            <p className="font-mono">{post.date}</p>
-            <p className="text-xl">{post.excerpt}</p>
+            <p className="font-mono my-2">{post.date}</p>
+            <p className="text-2xl my-4 text-green-600">{post.excerpt}</p>
             <div className="flex items-center flex-wrap">
               {post.tags.map((tag: string) => (
                 <p className="p-1 m-1 border rounded">{tag}</p>
@@ -75,8 +82,8 @@ const Post: NextPage = ({ post, children }: any) => {
               ),
               li: ({ children }) => <li className="my-2">&#187; {children}</li>,
               code_block: ({ children }) => (
-                <pre className="bg-gray-100 rounded shadow-xl p-4 overflow-x-scroll">
-                  <code className="language-javascript">{children}</code>
+                <pre className="rounded shadow-xl p-4 overflow-x-scroll">
+                  <code className="">{children}</code>
                 </pre>
               ),
             }}

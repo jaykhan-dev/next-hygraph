@@ -1,6 +1,7 @@
 import { useMutation } from "@apollo/client";
 import { useState } from "react";
 import CONTACT from "../../lib/createContact";
+import styles from "../../components/bgImages.module.css";
 
 /*
 type Contact = {
@@ -38,19 +39,25 @@ export default function Footer() {
   };
 
   return (
-    <footer className="bg-white text-blue-900 lg:p-0 p-4">
-      <div className="lg:w-2/3 mx-auto">
-        <div className="pt-24">
-          <h2 className="lg:text-4xl font-black w-full">Inquiry</h2>
-          <div className="my-4 py-4 px-4 border border-blue-900/40 shadow-xl rounded-lg">
-            <h2 className="text-4xl font-bold">Get in touch!</h2>
-            <p>
-              I would be happy to discuss a potential project, or talk about
-              technology and art
-            </p>
+    <footer className="text-blue-900 lg:p-0">
+      <div className={styles.contactBg}>
+        <div className="py-20 mt-20 lg:w-2/3 mx-auto lg:flex items-center space-x-2 text-white">
+          <div className="grid lg:place-items-center place-items-center">
+            <i className="fa-solid fa-comments text-6xl border p-4 rounded-lg"></i>
+          </div>
+          <div className="lg:text-start text-center">
+            <h2 className="text-4xl font-black w-full">Inquiry</h2>
+            <div className="">
+              <p>
+                I would be happy to discuss a potential project, or talk about
+                technology and art
+              </p>
+            </div>
           </div>
         </div>
-        <div className="grid lg:grid-cols-3 gap-4 py-20">
+      </div>
+      <div className="bg-white lg:p-0 p-4">
+        <div className="grid lg:grid-cols-3 gap-4 py-20 lg:w-2/3 mx-auto">
           <div className="py-8 space-y-4 border border-blue-900/40 p-4 rounded shadow-xl bg-gray-100">
             <p className="text-2xl">
               Contact me directly through the following channels.
@@ -75,6 +82,16 @@ export default function Footer() {
             >
               <i className="fa-brands fa-twitter"></i>
               <p>@j__khan</p>
+            </a>
+
+            <a
+              href="https://github.com/jaykhan-dev"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center space-x-4"
+            >
+              <i className="fa-brands fa-github"></i>
+              <p>jaykhan-dev</p>
             </a>
           </div>
 

@@ -4,7 +4,6 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { NextPage } from "next";
-// import Horse from "../../public/images/horse.svg";
 import styles from "../../components/bgImages.module.css";
 import GET_PROJECTS from "../../lib/projectAll";
 import GET_GRAPHICS_PROJECTS from "../../lib/projectGraphics";
@@ -13,7 +12,6 @@ import { Button } from "react-daisyui";
 import { useState } from "react";
 import * as Tabs from "@radix-ui/react-tabs";
 import tabStyles from "../../components/radixTabs.module.css";
-import HorseGraphic from "../../public/images/horse-graphic.svg";
 
 export async function getStaticProps() {
   const { data: allData } = await client.query({
@@ -50,49 +48,66 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
         />
       </Head>
 
-      <div className="bg-white">
-        <div className="lg:p-0 p-4 text-blue-900">
-          <div className="lg:w-2/3 mx-auto pt-24 mb-6">
-            <h1 className="text-4xl font-black">Projects</h1>
-            <div className="py-4 shadow-lg w-full p-4 border mt-4 rounded-lg">
-              <h2 className="text-3xl font-bold">An assortment of projects</h2>
-              <p>
-                Front-end Development using React, Sveltekit, Vue and Graphic
-                design using the Adobe Creative Cloud
-              </p>
+      <div className="text-blue-900">
+        <div className="">
+          {/* HEADER */}
+          <div className={styles.projectBg}>
+            <div className="lg:w-2/3 mx-auto lg:flex items-center lg:text-start text-center space-x-2 mt-20 py-20 text-white p-4">
+              <div className="flex lg:justify-start justify-center">
+                <i className="fa-solid fa-laptop-file text-6xl border p-4 rounded-lg"></i>
+              </div>
+              <div>
+                <h1 className="text-4xl font-black">Projects</h1>
+
+                <p className="lg:w-2/3">
+                  Front-end Development using React, Sveltekit, Vue and Graphic
+                  design using the Adobe Creative Cloud
+                </p>
+              </div>
             </div>
           </div>
 
           {/* FILTER */}
-          <div className="lg:w-2/3 mx-auto">
+          <div className="mx-auto bg-white lg:p-0 p-4">
             <Tabs.Root className={tabStyles.TabsRoot} defaultValue="tab1">
-              <div className="flex justify-start w-full whitespace-nowrap">
-                <Tabs.List
-                  className={tabStyles.TabsList}
-                  aria-label="Manage your account"
-                >
-                  <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab1">
-                    <div className="flex items-center space-x-2">
-                      <i className="fa-solid fa-list lg:text-xl text-4xl"></i>
-                      <p className="lg:flex hidden text-xl">All</p>
-                    </div>
-                  </Tabs.Trigger>
-                  <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab2">
-                    <div className="flex items-center space-x-2">
-                      <i className="fa-solid fa-desktop lg:text-xl text-4xl"></i>
-                      <p className="lg:flex hidden text-xl">Front-end</p>
-                    </div>
-                  </Tabs.Trigger>
-                  <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab3">
-                    <div className="flex items-center space-x-2">
-                      <i className="fa-solid fa-draw-polygon lg:text-xl text-4xl"></i>
-                      <p className="lg:flex hidden text-xl">Graphic Design</p>
-                    </div>
-                  </Tabs.Trigger>
-                </Tabs.List>
+              <div className="border-b py-4">
+                <div className="flex justify-start whitespace-nowrap w-2/3 mx-auto">
+                  <Tabs.List
+                    className={tabStyles.TabsList}
+                    aria-label="Manage your account"
+                  >
+                    <Tabs.Trigger
+                      className={tabStyles.TabsTrigger}
+                      value="tab1"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <i className="fa-solid fa-list lg:text-xl text-4xl"></i>
+                        <p className="lg:flex hidden text-xl">All</p>
+                      </div>
+                    </Tabs.Trigger>
+                    <Tabs.Trigger
+                      className={tabStyles.TabsTrigger}
+                      value="tab2"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <i className="fa-solid fa-desktop lg:text-xl text-4xl"></i>
+                        <p className="lg:flex hidden text-xl">Front-end</p>
+                      </div>
+                    </Tabs.Trigger>
+                    <Tabs.Trigger
+                      className={tabStyles.TabsTrigger}
+                      value="tab3"
+                    >
+                      <div className="flex items-center space-x-2">
+                        <i className="fa-solid fa-draw-polygon lg:text-xl text-4xl"></i>
+                        <p className="lg:flex hidden text-xl">Graphic Design</p>
+                      </div>
+                    </Tabs.Trigger>
+                  </Tabs.List>
+                </div>
               </div>
               <Tabs.Content className="TabsContent" value="tab1">
-                <div className="mx-auto py-10 grid lg:grid-cols-3 gap-4">
+                <div className="mx-auto py-10 grid lg:grid-cols-3 gap-4 lg:w-2/3">
                   {projects.map((project: any) => (
                     <Link
                       key={project.id}
@@ -129,7 +144,7 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                 </div>
               </Tabs.Content>
               <Tabs.Content className="TabsContent" value="tab2">
-                <div className="mx-auto py-10 grid lg:grid-cols-3 gap-4">
+                <div className="mx-auto py-10 grid lg:grid-cols-3 gap-4 lg:w-2/3">
                   {frontend.map((project: any) => (
                     <Link
                       key={project.id}
@@ -166,7 +181,7 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                 </div>
               </Tabs.Content>
               <Tabs.Content className="TabsContent" value="tab3">
-                <div className="mx-auto py-10 grid lg:grid-cols-3 gap-4">
+                <div className="mx-auto py-10 grid lg:grid-cols-3 gap-4 lg:w-2/3">
                   {graphics.map((project: any) => (
                     <Link
                       key={project.id}

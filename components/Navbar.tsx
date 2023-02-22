@@ -77,17 +77,6 @@ export default function Navbar() {
             </div>
           </Link>
           <Link
-            href="/resume"
-            className={
-              currentRoute === "/resume" ? styles.active : styles.nonActive
-            }
-          >
-            <div className="flex items-center space-x-2 hover:text-blue-600 duration-300">
-              <TableCellsIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
-              <p className="lg:block hidden">Resume</p>
-            </div>
-          </Link>
-          <Link
             href="/blog"
             className={
               currentRoute === "/blog" ? styles.active : styles.nonActive
@@ -96,6 +85,17 @@ export default function Navbar() {
             <div className="flex items-center space-x-2 hover:text-blue-600 duration-300">
               <BookOpenIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
               <p className="lg:block hidden">Blog</p>
+            </div>
+          </Link>
+          <Link
+            href="/resume"
+            className={
+              currentRoute === "/resume" ? styles.active : styles.nonActive
+            }
+          >
+            <div className="flex items-center space-x-2 hover:text-blue-600 duration-300">
+              <TableCellsIcon className="h-6 w-6 text-blue-500 lg:hidden block" />
+              <p className="lg:block hidden">Resume</p>
             </div>
           </Link>
           <Link
