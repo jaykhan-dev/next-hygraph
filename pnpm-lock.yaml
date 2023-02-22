@@ -10,6 +10,7 @@ specifiers:
   '@splinetool/react-spline': ^2.2.5
   '@splinetool/runtime': ^0.9.180
   '@types/node': 18.11.3
+  '@types/prismjs': ^1.26.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   '@types/three': ^0.148.0
@@ -20,6 +21,7 @@ specifiers:
   next: ^13.1.1
   next-themes: ^0.2.1
   postcss: ^8.4.21
+  prismjs: ^1.29.0
   react: 18.2.0
   react-daisyui: ^3.0.2
   react-dom: 18.2.0
@@ -45,6 +47,7 @@ dependencies:
   graphql: 16.6.0
   next: 13.1.1_biqbaboplfbrettd7655fr4n2y
   next-themes: 0.2.1_q76c2b4vyoegvsbrcwkfvimnai
+  prismjs: 1.29.0
   react: 18.2.0
   react-daisyui: 3.0.2_faxlxybk7dnfd32a42pj2qla7i
   react-dom: 18.2.0_react@18.2.0
@@ -55,6 +58,7 @@ dependencies:
 
 devDependencies:
   '@types/node': 18.11.3
+  '@types/prismjs': 1.26.0
   '@types/react': 18.0.21
   '@types/react-dom': 18.0.6
   autoprefixer: 10.4.13_postcss@8.4.21
@@ -563,6 +567,10 @@ packages:
 
   /@types/node/18.11.3:
     resolution: {integrity: sha512-fNjDQzzOsZeKZu5NATgXUPsaFaTxeRgFXoosrHivTl8RGeV733OLawXsGfEk9a8/tySyZUyiZ6E8LcjPFZ2y1A==}
+    dev: true
+
+  /@types/prismjs/1.26.0:
+    resolution: {integrity: sha512-ZTaqn/qSqUuAq1YwvOFQfVW1AR/oQJlLSZVustdjwI+GZ8kr0MSHBj0tsXPW1EqHubx50gtBEjbPGsdZwQwCjQ==}
     dev: true
 
   /@types/prop-types/15.7.5:
@@ -1147,6 +1155,11 @@ packages:
       nanoid: 3.3.4
       picocolors: 1.0.0
       source-map-js: 1.0.2
+
+  /prismjs/1.29.0:
+    resolution: {integrity: sha512-Kx/1w86q/epKcmte75LNrEoT+lX8pBpavuAbvJWRXar7Hz8jrtF+e3vY751p0R8H9HdArwaCTNDDzHg/ScJK1Q==}
+    engines: {node: '>=6'}
+    dev: false
 
   /prop-types/15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}
