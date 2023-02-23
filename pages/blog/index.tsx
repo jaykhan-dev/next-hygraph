@@ -76,23 +76,21 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
                     </div>
                   </Tabs.Trigger>
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab2">
-                    <a
-                      href="https://jaykhan.vercel.app/blog"
-                      rel="noopener noferrer"
-                      target="_blank"
-                      className="flex items-center space-x-2"
-                    >
-                      <i className="fa-brands fa-js lg:text-xl text-4xl"></i>
-                      <p className="lg:flex hidden text-xl">Javascript</p>
-                      <i className="fa-solid fa-arrow-up-right-from-square text-xl"></i>
-                    </a>
-                  </Tabs.Trigger>
-                  <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab3">
                     <div className="flex items-center space-x-2">
                       <i className="fa-brands fa-bitcoin lg:text-xl text-4xl"></i>
                       <p className="lg:flex hidden text-xl">Bitcoin</p>
                     </div>
                   </Tabs.Trigger>
+                  <a
+                    href="https://jaykhan.vercel.app/blog"
+                    rel="noopener noferrer"
+                    target="_blank"
+                    className="flex items-center space-x-2"
+                  >
+                    <i className="fa-brands fa-js lg:text-xl text-4xl"></i>
+                    <p className="lg:flex hidden text-xl">Javascript</p>
+                    <i className="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                  </a>
                 </Tabs.List>
               </div>
             </div>
@@ -127,38 +125,8 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
                 </div>
               </div>
             </Tabs.Content>
-            <Tabs.Content className="TabsContent" value="tab2">
-              <div className="mx-auto lg:p-0 p-4">
-                <div className="py-20 grid lg:grid-cols-4 gap-4 lg:w-2/3 mx-auto">
-                  {javascript.map((blog: any) => (
-                    <Link
-                      href={`/blog/${blog.slug}`}
-                      key={blog.id}
-                      className=""
-                    >
-                      <div className="border border-blue-900/40 rounded p-2 duration-300 hover:scale-95 flex space-x-2">
-                        {/* <Image
-                          src={blog.coverImage.url}
-                          width={200}
-                          height={200}
-                          alt="Blog Image"
-                        /> */}
-                        <div>
-                          <div className="mb-2">
-                            <h2 className="lg:text-2xl font-bold text-xl">
-                              {blog.title}
-                            </h2>
 
-                            <p className="font-mono">{blog.date}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </Tabs.Content>
-            <Tabs.Content className="TabsContent" value="tab3">
+            <Tabs.Content className="TabsContent" value="tab2">
               <div className="mx-auto lg:p-0 p-4">
                 <div className="py-20 grid lg:grid-cols-4 gap-4 lg:w-2/3 mx-auto">
                   {bitcoin.map((blog: any) => (
