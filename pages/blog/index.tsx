@@ -76,10 +76,16 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
                     </div>
                   </Tabs.Trigger>
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab2">
-                    <div className="flex items-center space-x-2">
+                    <a
+                      href="https://jaykhan.vercel.app/blog"
+                      rel="noopener noferrer"
+                      target="_blank"
+                      className="flex items-center space-x-2"
+                    >
                       <i className="fa-brands fa-js lg:text-xl text-4xl"></i>
                       <p className="lg:flex hidden text-xl">Javascript</p>
-                    </div>
+                      <i className="fa-solid fa-arrow-up-right-from-square text-xl"></i>
+                    </a>
                   </Tabs.Trigger>
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab3">
                     <div className="flex items-center space-x-2">

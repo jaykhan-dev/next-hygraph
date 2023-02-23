@@ -69,6 +69,10 @@ const Resume: NextPage = ({ jobs }: any) => {
           title="description"
           content="I'm a front-end developer using modern tools like Next JS, Sveltekit, Tailwind CSS, GraphQL, REST, Headless CMS."
         />
+        <meta
+          title="softare"
+          content="HTML/CSS, Javascript, Typescript, Next JS, Sveltekit, React, Tailwind CSS, Figma, Adobe Creative Cloud, Photoshop, Illustrator, GraphQL"
+        />
       </Head>
       <div className="bg-white text-blue-900 py-4">
         {/* DATA */}
