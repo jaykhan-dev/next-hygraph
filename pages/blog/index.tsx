@@ -12,7 +12,7 @@ import styles from "../../components/bgImages.module.css";
 import * as Tabs from "@radix-ui/react-tabs";
 import tabStyles from "../../components/radixTabs.module.css";
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
   const { data: allData } = await client.query({
     query: ALL_BLOGS,
   });

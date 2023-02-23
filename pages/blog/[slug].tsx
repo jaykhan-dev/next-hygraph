@@ -76,7 +76,7 @@ const Post: NextPage = ({ post, children }: any) => {
                 <p className="my-4 leading-loose">{children}</p>
               ),
               blockquote: ({ children }) => (
-                <blockquote className="p-4 border-l-4 text-2xl italic">
+                <blockquote className="p-4 border-l-4 italic">
                   {children}
                 </blockquote>
               ),
