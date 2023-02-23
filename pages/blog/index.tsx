@@ -96,14 +96,14 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
             </div>
             <Tabs.Content className="TabsContent" value="tab1">
               <div className="mx-auto lg:p-0 p-4">
-                <div className="py-20 grid lg:grid-cols-4 gap-4 lg:w-2/3 mx-auto">
+                <div className="py-20 lg:columns-3 gap-4 lg:w-2/3 mx-auto">
                   {blogs.map((blog: any) => (
                     <Link
                       href={`/blog/${blog.slug}`}
                       key={blog.id}
-                      className=""
+                      className="lg:my-0 my-1"
                     >
-                      <div className="border border-blue-900/40 rounded p-2 duration-300 hover:scale-95 flex space-x-2">
+                      <div className="border border-blue-900/40 rounded p-2 duration-300 hover:scale-95 flex space-x-2 lg:my-0 my-1">
                         {/* <Image
                           src={blog.coverImage.url}
                           width={200}
@@ -112,7 +112,7 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
                         /> */}
                         <div>
                           <div className="mb-2">
-                            <h2 className="lg:text-2xl font-bold text-xl">
+                            <h2 className="lg:text-xl font-bold">
                               {blog.title}
                             </h2>
 
@@ -128,7 +128,7 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
 
             <Tabs.Content className="TabsContent" value="tab2">
               <div className="mx-auto lg:p-0 p-4">
-                <div className="py-20 grid lg:grid-cols-4 gap-4 lg:w-2/3 mx-auto">
+                <div className="py-20 grid lg:grid-cols-3 gap-4 lg:w-2/3 mx-auto">
                   {bitcoin.map((blog: any) => (
                     <Link
                       href={`/blog/${blog.slug}`}
@@ -144,7 +144,7 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
                         /> */}
                         <div>
                           <div className="mb-2">
-                            <h2 className="lg:text-2xl font-bold text-xl">
+                            <h2 className="lg:text-xl font-bold">
                               {blog.title}
                             </h2>
 

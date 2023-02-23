@@ -8,7 +8,7 @@ import "prismjs/themes/prism-tomorrow.css";
 import { useEffect } from "react";
 import Prism from "prismjs";
 
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
   const paths: any = [];
   return {
     paths,
@@ -16,7 +16,7 @@ export async function getStaticPaths() {
   };
 }
 
-export async function getStaticProps({ params }: any) {
+export async function getServerSideProps({ params }: any) {
   const response = await client.query({
     query: SINGLE_BLOG,
     variables: {
