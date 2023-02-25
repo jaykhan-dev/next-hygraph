@@ -25,7 +25,9 @@ const Home: NextPage = () => {
         <div className="grid h-screen p-20">
           <div className="text-blue-900 relative lg:w-2/3 mx-auto">
             <div className="lg:absolute top-0 left-0">
-              <h1 className="text-8xl font-black my-4">Jay Khan</h1>
+              <h1 className="logo lg:text-9xl text-6xl font-black my-4">
+                Jay Khan
+              </h1>
               <p className="text-2xl my-14">
                 Front-end Developer, Graphic Designer, and Musician
               </p>
