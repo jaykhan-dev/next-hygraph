@@ -45,17 +45,19 @@ const Post: NextPage = ({ post, children }: any) => {
       </Head>
 
       <div className="bg-white text-blue-900 lg:p-0 p-4">
-        <div className="py-20 lg:w-1/2 mx-auto pt-24">
-          <div className="border-b py-8">
-            <h1 className="lg:text-6xl font-bold text-3xl">{post.title}</h1>
+        <div className="bg-sky-100 mt-20 py-20 lg:p-0 p-2">
+          <div className="py-8 lg:w-1/2 mx-auto">
             <p className="font-mono my-2">{post.date}</p>
+            <h1 className="lg:text-6xl font-bold text-3xl">{post.title}</h1>
             <p className="text-2xl my-4 text-green-600">{post.excerpt}</p>
             <div className="flex items-center flex-wrap">
               {post.tags.map((tag: string) => (
-                <p className="p-1 m-1 border rounded">{tag}</p>
+                <p className="p-1 m-1 border border-blue-900 rounded">{tag}</p>
               ))}
             </div>
           </div>
+        </div>
+        <div className="lg:w-1/2 mx-auto py-10">
           <div className="grid place-items-center my-4 rounded-lg">
             <Image
               src={post.coverImage.url}
