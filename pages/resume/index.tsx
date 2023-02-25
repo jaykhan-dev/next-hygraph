@@ -70,8 +70,8 @@ const Resume: NextPage = ({ jobs }: any) => {
           content="I'm a front-end developer using modern tools like Next JS, Sveltekit, Tailwind CSS, GraphQL, REST, Headless CMS."
         />
         <meta
-          title="softare"
-          content="HTML/CSS, Javascript, Typescript, Next JS, Sveltekit, React, Tailwind CSS, Figma, Adobe Creative Cloud, Photoshop, Illustrator, GraphQL"
+          title="keywords"
+          content="HTML/CSS, Javascript, Typescript, Next JS, Sveltekit, React, Tailwind CSS, Git, Figma, Adobe Creative Cloud, Photoshop, Illustrator, GraphQL"
         />
       </Head>
       <div className="bg-white text-blue-900 py-4">
@@ -95,7 +95,7 @@ const Resume: NextPage = ({ jobs }: any) => {
               <div>
                 <div className="flex items-center space-x-2">
                   <i className="fa-solid fa-code"></i>
-                  <h2 className="text-2xl my-4">Software</h2>
+                  <h2 className="text-2xl">Software</h2>
                 </div>
                 <ul>
                   <li>HTML/CSS/JS</li>
@@ -103,6 +103,7 @@ const Resume: NextPage = ({ jobs }: any) => {
                   <li>Next JS</li>
                   <li>Sveltekit</li>
                   <li>Tailwind CSS</li>
+                  <li>Git</li>
                   <li>GraphQL</li>
                   <li>REST API</li>
                   <li>PostgreSQL</li>
@@ -116,12 +117,18 @@ const Resume: NextPage = ({ jobs }: any) => {
               <div>
                 <div className="flex items-center space-x-2">
                   <i className="fa-solid fa-language"></i>
-                  <h2 className="text-2xl my-4">Languages</h2>
+                  <h2 className="text-2xl">Languages</h2>
                 </div>
                 <ul>
-                  <li>English: Fluent</li>
-                  <li>Urdu: Conversational</li>
-                  <li>French: Beginner reading</li>
+                  <li>
+                    <b>English:</b> Fluent
+                  </li>
+                  <li>
+                    <b>Urdu:</b> Conversational
+                  </li>
+                  <li>
+                    <b>French:</b> Beginner reading
+                  </li>
                 </ul>
               </div>
             </div>

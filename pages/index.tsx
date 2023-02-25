@@ -15,6 +15,10 @@ const Home: NextPage = () => {
           title="description"
           content="Front-end Developer, graphic designer, musician, and Bitcoin Adovocate."
         />
+        <meta
+          title="keywords"
+          content="HTML/CSS, Javascript, Typescript, Next JS, Sveltekit, React, Tailwind CSS, Git, Figma, Adobe Creative Cloud, Photoshop, Illustrator, GraphQL"
+        />
       </Head>
 
       <div className={styles.homeBg}>
