@@ -30,7 +30,7 @@ export const JAVASCRIPT_BLOG = gql`
 
 export const BITCOIN_BLOG = gql`
   query BITCOIN {
-    posts(where: { category_contains: "bitcoin" }) {
+    posts(where: { category_contains: "tech" }) {
       title
       date
       slug

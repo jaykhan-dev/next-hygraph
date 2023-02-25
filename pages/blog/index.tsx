@@ -77,8 +77,8 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
                   </Tabs.Trigger>
                   <Tabs.Trigger className={tabStyles.TabsTrigger} value="tab2">
                     <div className="flex items-center space-x-2">
-                      <i className="fa-brands fa-bitcoin lg:text-xl text-4xl"></i>
-                      <p className="lg:flex hidden text-xl">Bitcoin</p>
+                      <i className="fa-solid fa-desktop lg:text-xl text-4xl"></i>
+                      <p className="lg:flex hidden text-xl">Tech</p>
                     </div>
                   </Tabs.Trigger>
                   <a
@@ -96,7 +96,7 @@ const Blogs: NextPage = ({ blogs, javascript, bitcoin }: any) => {
             </div>
             <Tabs.Content className="TabsContent" value="tab1">
               <div className="mx-auto lg:p-0 p-4">
-                <div className="py-20 lg:columns-3 gap-4 lg:w-2/3 mx-auto">
+                <div className="py-20 grid lg:grid-cols-3 gap-4 lg:w-2/3 mx-auto">
                   {blogs.map((blog: any) => (
                     <Link
                       href={`/blog/${blog.slug}`}
