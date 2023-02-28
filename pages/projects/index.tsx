@@ -128,9 +128,9 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                           {project.title}
                         </h1>
                         <p className="my-4">{project.excerpt}</p>
-                        <p className="badge badge-primary">
+                        {/* <p className="badge badge-primary">
                           {project.category}
-                        </p>
+                        </p> */}
                         <div className="flex flex-wrap mt-4">
                           {project.tags.map((tag: string) => (
                             <p
@@ -165,9 +165,9 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                           {project.title}
                         </h1>
                         <p className="my-4">{project.excerpt}</p>
-                        <p className="badge badge-primary">
+                        {/* <p className="badge badge-primary">
                           {project.category}
-                        </p>
+                        </p> */}
                         <div className="flex flex-wrap mt-4">
                           {project.tags.map((tag: string) => (
                             <p
@@ -202,9 +202,9 @@ const Projects: NextPage = ({ projects, frontend, graphics }: any) => {
                           {project.title}
                         </h1>
                         <p className="my-4">{project.excerpt}</p>
-                        <p className="badge badge-primary">
+                        {/* <p className="badge badge-primary">
                           {project.category}
-                        </p>
+                        </p> */}
                         <div className="flex flex-wrap mt-4">
                           {project.tags.map((tag: string) => (
                             <p

@@ -2,7 +2,7 @@ import { gql } from "@apollo/client";
 
 export const GET_PROJECTS = gql`
   query Projects {
-    projects {
+    projects(orderBy: publishedAt_ASC) {
       title
       id
       slug
@@ -34,7 +34,10 @@ export const GET_GRAPHICS_PROJECTS = gql`
 
 export const GET_WEB_PROJECTS = gql`
   query WebProjects {
-    projects(where: { category_contains: "development" }) {
+    projects(
+      where: { category_contains: "development" }
+      orderBy: publishedAt_ASC
+    ) {
       title
       id
       slug
