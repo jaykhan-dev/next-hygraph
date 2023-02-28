@@ -62,7 +62,10 @@ const Project: NextPage = ({ project, children }: any) => {
     <>
       <Head>
         <title>{project.title}</title>
-        <meta title="description" content={project.excerpt} />
+        <meta name="description" content={project.excerpt} />
+        {project.tags.map((tag: any) => (
+          <meta name="keywords" key={tag} content={tag} />
+        ))}
       </Head>
       <div className="grid place-items-center p-4 bg-white text-blue-900">
         <div className="lg:w-1/2 mx-auto mt-20">
