@@ -36,7 +36,7 @@ export const GET_WEB_PROJECTS = gql`
   query WebProjects {
     projects(
       where: { category_contains: "development" }
-      orderBy: publishedAt_ASC
+      orderBy: publishedAt_DESC
     ) {
       title
       id
