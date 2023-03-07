@@ -117,22 +117,8 @@ const Project: NextPage = ({ project, children }: any) => {
                 </blockquote>
               ),
               li: ({ children }) => <li className="my-2">&#187; {children}</li>,
-              // a: ({ children }) => (
-              //   <a
-              //     className="text-blue-600"
-              //     rel="noreferrer noopener"
-              //     target="_blank"
-              //   >
-              //     {children}
-              //   </a>
-              // ),
             }}
           />
-          {/* <div>
-            {project.tags.map((tag: any) => (
-              <li>{tag.tag}</li>
-            ))}
-          </div> */}
         </motion.div>
       </div>
     </>
